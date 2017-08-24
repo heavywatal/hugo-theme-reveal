@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>{{ .Title }}</title>
+<link rel="stylesheet" href="{{ .Site.Params.reveal }}/css/reveal.css">
+<link rel="stylesheet" href="{{ .Site.Params.reveal }}/lib/css/zenburn.css">
+<link rel="stylesheet" href="/reveal-theme.css">
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+<section data-markdown
+         data-separator="^---"
+         data-separator-vertical="^vvv"
+         data-separator-notes="^Note:">
+{{ .RawContent }}
+</section>
+</div><!-- slides -->
+</div><!-- reveal -->
+<script src="{{ .Site.Params.reveal }}/lib/js/head.min.js"></script>
+<script src="{{ .Site.Params.reveal }}/js/reveal.js"></script>
+<script>
+Reveal.initialize({
+  progress: false,
+  slideNumber: true,
+  center: false,
+  transition: 'none',
+  transitionSpeed: 'fast',
+  backgroundTransition: 'none',
+  dependencies: [
+    { src: '{{ .Site.Params.reveal }}/plugin/markdown/marked.js' },
+    { src: '{{ .Site.Params.reveal }}/plugin/markdown/markdown.js' },
+    { src: '{{ .Site.Params.reveal }}/plugin/notes/notes.js', async: true },
+    { src: '{{ .Site.Params.reveal }}/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+  ]
+});
+</script>
+</body>
+</html>

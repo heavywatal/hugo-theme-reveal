@@ -1,15 +1,15 @@
 {
-  "name": "reveal-theme",
+  "name": "hugo-theme-reveal",
   "version": "0.1.0",
-  "description": "Simple theme for reveal.js",
+  "description": "Simple theme for reveal.js in Hugo",
   "scripts": {
-    "install": "git clone --depth=1 https://github.com/hakimel/reveal.js.git",
-    "update": "git -C reveal.js/ pull",
-    "build": "node-sass --output-style=expanded --include-path=reveal.js -o css/ sass/",
-    "start": "node-sass --output-style=expanded --include-path=reveal.js -o css/ -w sass/",
+    "install": "git -C static/ clone --depth=1 https://github.com/hakimel/reveal.js.git",
+    "update": "git -C static/reveal.js/ pull",
+    "build": "node-sass --output-style=expanded --include-path=static/reveal.js -o static/ sass/",
+    "start": "node-sass --output-style=expanded --include-path=static/reveal.js -o static/ -w sass/",
     "test": "http-server -o"
   },
-  "repository": "https://github.com/heavywatal/reveal-theme.git",
+  "repository": "https://github.com/heavywatal/hugo-theme-reveal.git",
   "license": "MIT",
   "devDependencies": {
     "http-server": "^0.10.0",
