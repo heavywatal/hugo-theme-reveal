@@ -1,0 +1,47 @@
+@charset "utf-8";
+
+// Default mixins and settings -----------------
+@import "css/theme/template/mixins";
+@import "css/theme/template/settings";
+// ---------------------------------------------
+
+// Background of the presentation
+$backgroundColor: #fff;
+
+// Primary/body text
+$mainFont: Palatino, Merriweather, serif;
+$mainFontSize: inherit;
+$mainColor: #444;
+
+// Vertical spacing between blocks of text
+$blockMargin: 0;
+
+// Headings
+$headingMargin: 0;
+$headingFont: $mainFont;
+$headingColor: $mainColor;
+$headingLineHeight: inherit;
+$headingLetterSpacing: normal;
+$headingTextTransform: none;
+$headingTextShadow: none;
+$headingFontWeight: bold;
+$heading1TextShadow: $headingTextShadow;
+
+$heading1Size: 1.5rem;
+$heading2Size: 1.5rem;
+$heading3Size: 1.2rem;
+$heading4Size: 1rem;
+
+// Links and actions
+$linkColor: #0366d6;
+$linkColorHover: lighten($linkColor, 15%);
+
+// Text selection
+$selectionBackgroundColor: lighten($linkColor, 25%);
+$selectionColor: #fff;
+
+// Theme template ------------------------------
+@import "css/theme/template/theme";
+// ---------------------------------------------
+
+@import "style";

@@ -1,0 +1,18 @@
+{
+  "name": "reveal-theme",
+  "version": "0.1.0",
+  "description": "Simple theme for reveal.js",
+  "scripts": {
+    "install": "git clone --depth=1 https://github.com/hakimel/reveal.js.git",
+    "update": "git -C reveal.js/ pull",
+    "build": "node-sass --output-style=expanded --include-path=reveal.js -o css/ sass/",
+    "start": "node-sass --output-style=expanded --include-path=reveal.js -o css/ -w sass/",
+    "test": "http-server -o"
+  },
+  "repository": "https://github.com/heavywatal/reveal-theme.git",
+  "license": "MIT",
+  "devDependencies": {
+    "http-server": "^0.10.0",
+    "node-sass": "^4.5.3"
+  }
+}
