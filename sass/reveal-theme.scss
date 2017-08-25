@@ -1,47 +1,73 @@
 @charset "utf-8";
 
-// Default mixins and settings -----------------
-@import "css/theme/template/mixins";
-@import "css/theme/template/settings";
-// ---------------------------------------------
+$serif: Palatino, Merriweather, serif;
+$sans-serif: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif;
+$monospace: "Ubuntu Mono", "DejaVu Sans Mono", Menlo, Consolas, monospace;
 
-// Background of the presentation
-$backgroundColor: #fff;
+$main-font-family: $serif;
+$heading-font-family: $serif;
 
-// Primary/body text
-$mainFont: Palatino, Merriweather, serif;
-$mainFontSize: inherit;
-$mainColor: #444;
+$background-color: #fff;
+$main-color: #444;
+$heading-color: $main-color;
 
-// Vertical spacing between blocks of text
-$blockMargin: 0;
+html {
+  font-size: 150%;
+}
 
-// Headings
-$headingMargin: 0;
-$headingFont: $mainFont;
-$headingColor: $mainColor;
-$headingLineHeight: inherit;
-$headingLetterSpacing: normal;
-$headingTextTransform: none;
-$headingTextShadow: none;
-$headingFontWeight: bold;
-$heading1TextShadow: $headingTextShadow;
+body {
+  background-color: #ddd;
+}
 
-$heading1Size: 1.5rem;
-$heading2Size: 1.5rem;
-$heading3Size: 1.2rem;
-$heading4Size: 1rem;
+.reveal {
+  font-family: $main-font-family;
+  font-weight: normal;
+  color: $main-color;
 
-// Links and actions
-$linkColor: #0366d6;
-$linkColorHover: lighten($linkColor, 15%);
+  h1,
+  h2,
+  h3 {
+    font-family: $heading-font-family;
+    font-weight: bold;
+    color: $heading-color;
+  }
 
-// Text selection
-$selectionBackgroundColor: lighten($linkColor, 25%);
-$selectionColor: #fff;
+  h1 {
+    font-size: 1.5rem;
+    margin: 3rem 0 4rem;
+  }
 
-// Theme template ------------------------------
-@import "css/theme/template/theme";
-// ---------------------------------------------
+  h2 {
+    font-size: 1.5rem;
+    margin: 0 0 2rem;
+  }
 
-@import "style";
+  h3 {
+    font-size: 1.2rem;
+    margin: 0 0 1rem;
+  }
+
+  p {
+    margin: 1rem 0;
+  }
+
+  pre,
+  code,
+  kbd {
+    font-family: $monospace;
+  }
+
+  .slides {
+    background-color: $background-color;
+    text-align: left;
+
+    section {
+      box-sizing: border-box;
+      padding: 2rem;
+      width: inherit;
+      height: 100%;
+    }
+  }
+}
+
+@import "class";
