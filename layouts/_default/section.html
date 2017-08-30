@@ -14,8 +14,10 @@
 <section data-markdown
          data-separator="^---"
          data-separator-vertical="^vvv"
-         data-separator-notes="^Note:">
+         data-separator-notes="^\?\?\?">
+<textarea data-template>
 {{ .RawContent }}
+</textarea>
 </section>
 </div><!-- slides -->
 </div><!-- reveal -->
@@ -23,16 +25,23 @@
 <script src="/reveal.js/js/reveal.js"></script>
 <script>
 Reveal.initialize({
+  controls: false,
   progress: false,
-  slideNumber: true,
+  slideNumber: 'c/t',
+  history: true,
   center: false,
   transition: 'none',
   transitionSpeed: 'fast',
   backgroundTransition: 'none',
+  math: {
+    mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js',
+    config: 'TeX-AMS_CHTML'
+  },
   dependencies: [
     { src: '/reveal.js/plugin/markdown/marked.js' },
     { src: '/reveal.js/plugin/markdown/markdown.js' },
     { src: '/reveal.js/plugin/notes/notes.js', async: true },
+    { src: '/reveal.js/plugin/math/math.js', async: true },
     { src: '/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
   ]
 });

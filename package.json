@@ -1,7 +1,7 @@
 {
   "name": "hugo-theme-reveal",
   "version": "0.1.0",
-  "description": "Simple theme for reveal.js in Hugo",
+  "description": "Simple theme for Hugo with reveal.js",
   "scripts": {
     "install": "git -C static/ clone --depth=1 https://github.com/hakimel/reveal.js.git",
     "update": "git -C static/reveal.js/ pull",
