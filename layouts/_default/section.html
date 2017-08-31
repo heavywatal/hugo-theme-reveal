@@ -10,15 +10,12 @@
 </head>
 <body>
 <div class="reveal">
-<div class="slides">
-<section data-markdown
-         data-separator="^---"
-         data-separator-vertical="^vvv"
-         data-separator-notes="^\?\?\?">
-<textarea data-template>
-{{ .RawContent }}
-</textarea>
-</section>
+<div class="slides">{{ range (split .RawContent "\n---") }}
+{{ $v := (split . "\n???") }}
+<section>
+{{ index $v 0 | markdownify }}
+{{ if gt (len $v) 1 }}<aside class="notes">{{ index $v 1 }}</aside>{{ end }}
+</section>{{ end }}
 </div><!-- slides -->
 </div><!-- reveal -->
 <script src="/reveal.js/lib/js/head.min.js"></script>
