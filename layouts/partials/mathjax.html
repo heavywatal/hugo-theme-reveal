@@ -1,0 +1,20 @@
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  displayAlign: "left",
+  displayIndent: "2em",
+  tex2jax: {
+    inlineMath: [['$','$']],
+    displayMath: [['\[','\]']],
+    processRefs: false,
+    processEnvironments: true,
+    preview: false
+  },
+  skipStartupTypeset: true
+});
+MathJax.Hub.Queue(['Typeset', MathJax.Hub]);
+MathJax.Hub.Queue(Reveal.layout);
+Reveal.addEventListener('slidechanged', function(event) {
+  MathJax.Hub.Queue(['Typeset', MathJax.Hub, event.currentSlide]);
+});
+</script>
+<script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS_CHTML"></script>
