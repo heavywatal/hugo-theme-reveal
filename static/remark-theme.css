@@ -110,135 +110,141 @@
 }
 
 html {
-  font-size: 169%;
+  font-size: 160%;
 }
 
 body {
-  line-height: unset;
+  color: #444;
+  font-family: Palatino, Merriweather, serif;
 }
 
-section {
-  background-color: #fff;
-  box-sizing: border-box;
-  height: 100%;
+.remark-slide-scaler {
   overflow-y: scroll;
 }
 
-.reveal {
-  font-family: Palatino, Merriweather, serif;
-  font-weight: normal;
-  color: #444;
-  background-color: #ddd;
+.remark-slide-content {
+  background-color: #fff;
+  font-size: inherit;
+  padding: 0 1.8rem;
 }
 
-.reveal a {
+.remark-slide-content a {
   color: #0042ab;
   text-decoration: none;
 }
 
-.reveal h1,
-.reveal h2,
-.reveal h3 {
+.remark-slide-content h1,
+.remark-slide-content h2,
+.remark-slide-content h3 {
   font-family: Palatino, Merriweather, serif;
   font-weight: bold;
   color: #444;
 }
 
-.reveal h1 {
+.remark-slide-content h1 {
   font-size: 1.4rem;
   margin: 3rem 0;
 }
 
-.reveal h2 {
+.remark-slide-content h2 {
   font-size: 1.4rem;
   margin: 1.5rem 0;
 }
 
-.reveal h3 {
+.remark-slide-content h3 {
   font-size: 1.4rem;
   margin: 1.2rem 0 0;
 }
 
-.reveal ul {
+.remark-slide-content ul {
   margin: 0.8rem 0;
   padding-left: 1rem;
 }
 
-.reveal ul.task-list {
+.remark-slide-content ul.task-list {
   list-style-type: none;
   padding-left: 0;
 }
 
-.reveal ul.task-list ul.task-list {
+.remark-slide-content ul.task-list ul.task-list {
   padding-left: 1rem;
 }
 
-.reveal li {
+.remark-slide-content li {
   margin-bottom: 0.5rem;
 }
 
-.reveal dt {
+.remark-slide-content dt {
   font-weight: bold;
 }
 
-.reveal pre,
-.reveal code,
-.reveal kbd {
+.remark-slide-content pre,
+.remark-slide-content code,
+.remark-slide-content kbd {
   font-family: "Ubuntu Mono", "DejaVu Sans Mono", Menlo, Consolas, monospace;
 }
 
-.reveal .author {
+.remark-slide-content .author {
   font-weight: bold;
   font-size: 1.1rem;
   margin: 1rem 0;
 }
 
-.reveal .affiliation {
+.remark-slide-content .affiliation {
   font-size: 1.1rem;
 }
 
-.reveal .footnote {
+.remark-slide-content .footnote {
   position: absolute;
   bottom: 1rem;
 }
 
-.reveal .cite {
+.remark-slide-content .cite {
   color: #666;
   font-size: 0.75rem;
   text-align: right;
 }
 
-.reveal .column-container {
+.remark-slide-content .column-container {
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
 }
 
-.reveal .column {
+.remark-slide-content .column {
   flex: 1 1 100%;
   margin: 0 0.5rem;
 }
 
-.reveal .column:first-child {
+.remark-slide-content .column:first-child {
   margin-left: 0;
 }
 
-.reveal .column:last-child {
+.remark-slide-content .column:last-child {
   margin-right: 0;
 }
 
-.reveal p {
-  margin: 1rem 0;
+.remark-notes-area {
+  font-size: 62.5%;
 }
 
-.reveal strong {
-  font-weight: bold;
+.title-background-gif {
+  position: relative;
+  z-index: 42;
 }
 
-.reveal .slides {
-  text-align: left;
-}
-
-.reveal .slides section {
-  padding: 0 2rem;
+.title-background-gif::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  background-image: url("/figures/title-background.gif");
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-size: 40%;
+  opacity: 1;
 }

@@ -1,0 +1,55 @@
+a {
+  color: #0042ab;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3 {
+  font-family: $heading-font-family;
+  font-weight: bold;
+  color: $heading-color;
+}
+
+h1 {
+  font-size: 1.4rem;
+  margin: 3rem 0;
+}
+
+h2 {
+  font-size: 1.4rem;
+  margin: 1.5rem 0;
+}
+
+h3 {
+  font-size: 1.4rem;
+  margin: 1.2rem 0 0;
+}
+
+ul {
+  margin: 0.8rem 0;
+  padding-left: 1rem;
+
+  &.task-list {
+    list-style-type: none;
+    padding-left: 0;
+
+    ul.task-list {
+      padding-left: 1rem;
+    }
+  }
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+dt {
+  font-weight: bold;
+}
+
+pre,
+code,
+kbd {
+  font-family: $monospace;
+}

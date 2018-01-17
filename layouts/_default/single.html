@@ -3,16 +3,14 @@
 <div class="reveal">
 <div class="slides">
 {{- range (split .RawContent "\n---") -}}
-{{ $v := (split . "\n???") }}
+{{ $parts := (split . "\n???") }}
 <section>
-{{ index $v 0 | markdownify }}
-{{ if gt (len $v) 1 -}}
+{{ index $parts 0 | markdownify -}}
+{{ if gt (len $parts) 1 -}}
 <aside class="notes">
-{{ index $v 1 | markdownify }}
-</aside>
-{{ end -}}
-</section>
-{{ end -}}
+{{ index $parts 1 | markdownify }}
+</aside>{{ end }}
+</section>{{ end }}
 </div><!-- slides -->
 </div><!-- reveal -->
 {{ partialCached "reveal-initialize.html" . }}

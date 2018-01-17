@@ -1,0 +1,16 @@
+{{ partial "header.html" . }}
+<body>
+<div id="source">
+{{ range $i, $slide := (split .RawContent "\n---") }}
+{{ if gt $i 0 }}---{{ end }}
+{{ $parts := (split $slide "\n???") }}
+{{- index $parts 0 | markdownify -}}
+{{ if gt (len $parts) 1 }}
+???
+{{- index $parts 1 -}}
+{{ end }}
+{{ end }}
+</div>
+{{ partialCached "remark-create.html" . }}
+</body>
+{{ partialCached "footer.html" . }}

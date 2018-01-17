@@ -4,7 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
 <title>{{ .Title }}</title>
+{{ if eq .Type "remark" -}}
+<link rel="stylesheet" href="/remark-theme.css">
+{{ else -}}
 <link rel="stylesheet" href="/reveal.js/css/reveal.css">
 <link rel="stylesheet" href="/reveal-theme.css">
+{{ end -}}
 {{ partialCached "mathjax.html" . }}
 </head>

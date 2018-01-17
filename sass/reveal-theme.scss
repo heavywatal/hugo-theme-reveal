@@ -1,18 +1,10 @@
 @charset "utf-8";
 
-$serif: Palatino, Merriweather, serif;
-$sans-serif: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", Helvetica, "Yu Gothic", sans-serif;
-$monospace: "Ubuntu Mono", "DejaVu Sans Mono", Menlo, Consolas, monospace;
-
-$main-font-family: $serif;
-$heading-font-family: $serif;
-
-$background-color: #fff;
-$main-color: #444;
-$heading-color: $main-color;
+@import "variable";
+@import "chroma";
 
 html {
-  font-size: 160%;
+  font-size: 169%;
 }
 
 body {
@@ -26,67 +18,14 @@ section {
   overflow-y: scroll;
 }
 
-a {
-  color: #0042ab;
-  text-decoration: none;
-}
-
 .reveal {
+  @import "common";
+  @import "class";
+
   font-family: $main-font-family;
   font-weight: normal;
   color: $main-color;
   background-color: #ddd;
-
-  h1,
-  h2,
-  h3 {
-    font-family: $heading-font-family;
-    font-weight: bold;
-    color: $heading-color;
-  }
-
-  h1 {
-    font-size: 1.4rem;
-    margin: 3rem 0;
-  }
-
-  h2 {
-    font-size: 1.4rem;
-    margin: 1.5rem 0;
-  }
-
-  h3 {
-    font-size: 1.4rem;
-    margin: 1.2rem 0 0;
-  }
-
-  ul {
-    margin: 0.8rem 0;
-    padding-left: 1rem;
-
-    &.task-list {
-      list-style-type: none;
-      padding-left: 0;
-
-      ul.task-list {
-        padding-left: 1rem;
-      }
-    }
-  }
-
-  li {
-    margin-bottom: 0.5rem;
-  }
-
-  dt {
-    font-weight: bold;
-  }
-
-  pre,
-  code,
-  kbd {
-    font-family: $monospace;
-  }
 
   p {
     margin: 1rem 0;
@@ -104,6 +43,3 @@ a {
     }
   }
 }
-
-@import "class";
-@import "chroma";
