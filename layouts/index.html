@@ -3,11 +3,9 @@
 <header>
 <h1>{{ .Site.Title }}</h1>
 </header>
-<main>
 <ul>
 {{ range .Site.Sections.ByDate -}}
 <a href="{{ .URL }}"><li>{{ .Date.Format "2006-01-02" }} {{ .Section }}</li></a>
 {{ end }}</ul>
-</main>
 </body>
 {{ partialCached "footer.html" . }}

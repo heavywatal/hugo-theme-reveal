@@ -1,0 +1,27 @@
+@charset "utf-8";
+
+@import "variable";
+@import "chroma";
+@import "common";
+@import "class";
+
+html,
+body {
+  box-sizing: border-box;
+  min-height: 100%;
+}
+
+html {
+  background-color: #ddd;
+}
+
+body {
+  background-color: $background-color;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 3rem;
+}
+
+hr {
+  margin: 3rem;
+}

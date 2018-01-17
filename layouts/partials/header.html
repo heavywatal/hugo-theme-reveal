@@ -6,9 +6,11 @@
 <title>{{ .Title }}</title>
 {{ if eq .Type "remark" -}}
 <link rel="stylesheet" href="/remark-theme.css">
-{{ else -}}
+{{ else if eq .Type "reveal" -}}
 <link rel="stylesheet" href="/reveal.js/css/reveal.css">
 <link rel="stylesheet" href="/reveal-theme.css">
+{{ else -}}
+<link rel="stylesheet" href="/plain.css">
 {{ end -}}
 {{ partialCached "mathjax.html" . }}
 </head>
