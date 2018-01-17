@@ -13,29 +13,29 @@
     position: absolute;
     bottom: 1rem;
   }
-}
 
-.cite {
-  color: #666;
-  font-size: 0.75rem;
-  text-align: right;
-}
-
-.column-container {
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-}
-
-.column {
-  flex: 1 1 100%;
-  margin: 0 0.5rem;
-
-  &:first-child {
-    margin-left: 0;
+  .cite {
+    color: #666;
+    font-size: 0.75rem;
+    text-align: right;
   }
 
-  &:last-child {
-    margin-right: 0;
+  .column-container {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+
+  .column {
+    flex: 1 1 100%;
+    margin: 0 0.5rem;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
   }
 }

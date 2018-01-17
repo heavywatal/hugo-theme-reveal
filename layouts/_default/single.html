@@ -1,0 +1,14 @@
+{{ partial "header.html" . }}
+<body>
+<div class="reveal">
+<div class="slides">{{ range (split .RawContent "\n---") }}
+{{ $v := (split . "\n???") }}
+<section>
+{{ index $v 0 | markdownify }}
+{{ if gt (len $v) 1 }}<aside class="notes">{{ index $v 1 }}</aside>{{ end }}
+</section>{{ end }}
+</div><!-- slides -->
+</div><!-- reveal -->
+{{ partialCached "reveal-initialize.html" . }}
+</body>
+{{ partialCached "footer.html" . }}

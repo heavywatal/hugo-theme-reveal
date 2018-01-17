@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 $serif: Palatino, Merriweather, serif;
-$sans-serif: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif;
+$sans-serif: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", Helvetica, "Yu Gothic", sans-serif;
 $monospace: "Ubuntu Mono", "DejaVu Sans Mono", Menlo, Consolas, monospace;
 
 $main-font-family: $serif;
@@ -17,6 +17,16 @@ html {
 
 body {
   background-color: #ddd;
+  line-height: unset;
+}
+
+a {
+  color: #0042ab;
+  text-decoration: none;
+}
+
+.present {
+  overflow-y: scroll;
 }
 
 .reveal {
@@ -49,6 +59,20 @@ body {
 
   ul {
     margin: 0.8rem 0;
+    padding-left: 1rem;
+
+    &.task-list {
+      list-style-type: none;
+      padding-left: 0;
+
+      ul.task-list {
+        padding-left: 1rem;
+      }
+    }
+  }
+
+  li {
+    margin-bottom: 0.5rem;
   }
 
   dt {
@@ -59,6 +83,14 @@ body {
   code,
   kbd {
     font-family: $monospace;
+  }
+
+  p {
+    margin: 1rem 0;
+  }
+
+  strong {
+    font-weight: bold;
   }
 
   .slides {
@@ -75,3 +107,4 @@ body {
 }
 
 @import "class";
+@import "chroma";

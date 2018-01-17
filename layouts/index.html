@@ -1,19 +1,13 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-<title>{{ .Title }}</title>
-<link rel="stylesheet" href="/reveal-theme.css">
-</head>
+{{ partial "header.html" . }}
 <body>
 <header>
 <h1>{{ .Site.Title }}</h1>
 </header>
 <main>
-<ul>{{ range .Site.Sections }}
-<a href="{{ .URL }}"><li>{{ .Section }} {{ .Title }}</li></a>
+<ul>
+{{ range .Site.Sections.ByDate -}}
+<a href="{{ .URL }}"><li>{{ .Date.Format "2006-01-02" }} {{ .Section }}</li></a>
 {{ end }}</ul>
 </main>
 </body>
-</html>
+{{ partialCached "footer.html" . }}
