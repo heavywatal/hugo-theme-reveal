@@ -16,8 +16,14 @@ html {
 }
 
 body {
-  background-color: #ddd;
   line-height: unset;
+}
+
+section {
+  background-color: $background-color;
+  box-sizing: border-box;
+  height: 100%;
+  overflow-y: scroll;
 }
 
 a {
@@ -25,14 +31,11 @@ a {
   text-decoration: none;
 }
 
-.present {
-  overflow-y: scroll;
-}
-
 .reveal {
   font-family: $main-font-family;
   font-weight: normal;
   color: $main-color;
+  background-color: #ddd;
 
   h1,
   h2,
@@ -94,14 +97,10 @@ a {
   }
 
   .slides {
-    background-color: $background-color;
     text-align: left;
 
     section {
-      box-sizing: border-box;
       padding: 0 2rem;
-      width: inherit;
-      height: 100%;
     }
   }
 }

@@ -3,8 +3,14 @@ html {
 }
 
 body {
-  background-color: #ddd;
   line-height: unset;
+}
+
+section {
+  background-color: #fff;
+  box-sizing: border-box;
+  height: 100%;
+  overflow-y: scroll;
 }
 
 a {
@@ -12,14 +18,11 @@ a {
   text-decoration: none;
 }
 
-.present {
-  overflow-y: scroll;
-}
-
 .reveal {
   font-family: Palatino, Merriweather, serif;
   font-weight: normal;
   color: #444;
+  background-color: #ddd;
 }
 
 .reveal h1,
@@ -82,15 +85,11 @@ a {
 }
 
 .reveal .slides {
-  background-color: #fff;
   text-align: left;
 }
 
 .reveal .slides section {
-  box-sizing: border-box;
   padding: 0 2rem;
-  width: inherit;
-  height: 100%;
 }
 
 .reveal .author {
