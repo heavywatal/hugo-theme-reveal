@@ -5,19 +5,24 @@
 @import "common";
 @import "class";
 
+* {
+  box-sizing: border-box;
+}
+
 html,
 body {
-  box-sizing: border-box;
-  min-height: 100%;
-}
-
-html {
-  background-color: #ddd;
+  height: 100%;
 }
 
 body {
+  background-color: #ddd;
+  margin: 0;
+}
+
+main {
   background-color: $background-color;
   max-width: 800px;
+  min-height: 100%;
   margin: 0 auto;
   padding: 3rem;
 }
