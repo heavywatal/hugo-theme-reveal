@@ -5,7 +5,7 @@
 {{ if gt $i 0 }}---{{ end }}
 {{ $parts := (split $slide "\n???") }}
 {{- index $parts 0 | markdownify -}}
-{{ if gt (len $parts) 1 }}
+{{ if and $.Page.Draft (gt (len $parts) 1) }}
 ???
 {{- index $parts 1 -}}
 {{ end }}
