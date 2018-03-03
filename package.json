@@ -12,7 +12,7 @@
   "repository": "https://github.com/heavywatal/hugo-theme-reveal.git",
   "license": "MIT",
   "devDependencies": {
-    "http-server": "^0.10.0",
+    "http-server": "^0.11.1",
     "node-sass": "^4.7.2"
   }
 }
