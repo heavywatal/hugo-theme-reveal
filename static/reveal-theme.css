@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .chroma .err,
 .chroma .w,
 .chroma .n,
@@ -179,6 +180,39 @@ section {
 
 .reveal dt {
   font-weight: bold;
+}
+
+.reveal blockquote {
+  font-style: italic;
+  margin: 8px 16px;
+  padding: 6px 16px 1px;
+  border-left: solid 4px #ccc;
+  position: relative;
+}
+
+.reveal blockquote::before {
+  content: "“";
+  position: absolute;
+  top: -16px;
+  left: 8px;
+  font-size: 2.4rem;
+  font-family: serif;
+  color: #999;
+}
+
+.reveal pre {
+  background-color: #f6f6f6;
+  padding: 0.6rem;
+  margin: 0.6rem 0;
+  overflow-x: auto;
+}
+
+.reveal pre.chroma {
+  background-color: #e6e6e6;
+}
+
+.reveal em {
+  font-style: italic;
 }
 
 .reveal pre,

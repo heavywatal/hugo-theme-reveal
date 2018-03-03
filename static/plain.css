@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .chroma .err,
 .chroma .w,
 .chroma .n,
@@ -157,6 +158,39 @@ li {
 
 dt {
   font-weight: bold;
+}
+
+blockquote {
+  font-style: italic;
+  margin: 8px 16px;
+  padding: 6px 16px 1px;
+  border-left: solid 4px #ccc;
+  position: relative;
+}
+
+blockquote::before {
+  content: "“";
+  position: absolute;
+  top: -16px;
+  left: 8px;
+  font-size: 2.4rem;
+  font-family: serif;
+  color: #999;
+}
+
+pre {
+  background-color: #f6f6f6;
+  padding: 0.6rem;
+  margin: 0.6rem 0;
+  overflow-x: auto;
+}
+
+pre.chroma {
+  background-color: #e6e6e6;
+}
+
+em {
+  font-style: italic;
 }
 
 pre,
