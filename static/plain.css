@@ -158,6 +158,11 @@ li {
 
 dt {
   font-weight: bold;
+  margin: 0.5rem 0 0 0;
+}
+
+dd {
+  margin: 0 0 0.1rem 1rem;
 }
 
 blockquote {
@@ -174,7 +179,7 @@ blockquote::before {
   top: -16px;
   left: 8px;
   font-size: 2.4rem;
-  font-family: serif;
+  font-family: Palatino, Merriweather, serif;
   color: #999;
 }
 
