@@ -167,16 +167,16 @@ dd {
 
 blockquote {
   font-style: italic;
-  margin: 8px 16px;
-  padding: 6px 16px 1px;
-  border-left: solid 4px #ccc;
+  margin: 8px 3px;
+  padding: 6px 36px 1px;
+  border-left: solid 5px #ccc;
   position: relative;
 }
 
 blockquote::before {
   content: "“";
   position: absolute;
-  top: -16px;
+  top: -8px;
   left: 8px;
   font-size: 2.4rem;
   font-family: Palatino, Merriweather, serif;
