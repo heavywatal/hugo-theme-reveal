@@ -5,12 +5,12 @@
 <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
 <title>{{ .Title }}</title>
 {{ if eq .Type "remark" -}}
-<link rel="stylesheet" href="/remark-theme.css">
+<link rel="stylesheet" href="{{ "remark-theme.css" | relURL }}">
 {{ else if eq .Type "reveal" -}}
-<link rel="stylesheet" href="/reveal.js/css/reveal.css">
-<link rel="stylesheet" href="/reveal-theme.css">
+<link rel="stylesheet" href="{{ "reveal.js/css/reveal.css" | relURL }}">
+<link rel="stylesheet" href="{{ "reveal-theme.css" | relURL }}">
 {{ else -}}
-<link rel="stylesheet" href="/plain.css">
+<link rel="stylesheet" href="{{ "plain.css" | relURL }}">
 {{ end -}}
 {{ partialCached "mathjax.html" . }}
 </head>

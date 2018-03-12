@@ -1,5 +1,5 @@
-<script src="/reveal.js/lib/js/head.min.js"></script>
-<script src="/reveal.js/js/reveal.js"></script>
+<script src="{{ "reveal.js/lib/js/head.min.js" | relURL }}"></script>
+<script src="{{ "reveal.js/js/reveal.js" | relURL }}"></script>
 <script>
 Reveal.initialize({
   width: 960,
@@ -17,7 +17,7 @@ Reveal.initialize({
   backgroundTransition: 'none',
   viewDistance: 1,
   dependencies: [
-    { src: '/reveal.js/plugin/notes/notes.js', async: true }
+    { src: '{{ "reveal.js/plugin/notes/notes.js" | relURL }}', async: true }
   ]
 });
 </script>
