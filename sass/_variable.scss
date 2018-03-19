@@ -1,9 +1,9 @@
 $serif: Palatino, Merriweather, serif;
 $sans-serif: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", Helvetica, "Yu Gothic Medium", sans-serif;
-$monospace: Menlo, Consolas, "DejaVu Sans Mono", monospace, "Yu Gothic Medium";
+$monospace: Menlo, Consolas, "DejaVu Sans Mono", "Yu Gothic Medium", monospace;
 
-$main-font-family: $serif;
-$heading-font-family: $serif;
+$main-font-family: $sans-serif;
+$heading-font-family: $sans-serif;
 
 $background-color: #fff;
 $main-color: #444;
