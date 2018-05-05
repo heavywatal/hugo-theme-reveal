@@ -181,6 +181,11 @@ section {
   margin: 1.2rem 0;
 }
 
+.reveal ol {
+  margin: 0.8rem 0;
+  padding-left: 1.3rem;
+}
+
 .reveal ul {
   margin: 0.8rem 0;
   padding-left: 1rem;

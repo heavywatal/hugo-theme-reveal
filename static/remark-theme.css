@@ -178,6 +178,11 @@ body {
   margin: 1.2rem 0;
 }
 
+.remark-slide-content ol {
+  margin: 0.8rem 0;
+  padding-left: 1.3rem;
+}
+
 .remark-slide-content ul {
   margin: 0.8rem 0;
   padding-left: 1rem;
