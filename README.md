@@ -1,8 +1,63 @@
-# hugo-theme-reveal: simple theme for Hugo with reveal.js
+# hugo-theme-reveal: simple theme for Hugo with remark/reveal.js
+
+## Installation
+
+### reveal.js
+
+https://github.com/hakimel/reveal.js
+
+1.  Clone reveal.js
+    ```sh
+    git clone https://github.com/hakimel/reveal.js.git
+    git -C reveal.js/ checkout tags/3.6.0
+    ```
+
+1.  Copy necessary files to `static/`:
+    ```sh
+    SRC=reveal.js
+    DST=static/reveal.js
+    rsync -auvm --exclude='theme' --exclude='*scss' $SRC/css $DST/
+    rsync -auvm $SRC/js $DST/
+    rsync -auvm --exclude='css' --exclude='font' $SRC/lib $DST/
+    rsync -auvm --include='*/' --include='notes/notes.*' --exclude='*' $SRC/plugin $DST/
+    ```
+
+### remark
+
+https://github.com/gnab/remark/wiki/Contributing#building
+
+1.  Clone remark and install dependencies
+    ```sh
+    git clone https://github.com/hakimel/reveal.js.git
+    cd remark/
+    npm install
+    ```
+
+1.  Modify `package.json` to exclude highlighter from build:
+    ```js
+    {
+      //
+      "config": {
+        "highlighter": false
+      },
+      //
+    }
+    ```
+
+1.  Build remark:
+    ```sh
+    node make highlighter
+    node make lint
+    node make bundle
+    node make minify
+    ```
+
+1.  Copy the minified script to `static/`:
+    `cp -a out/remark.min.js ../static/`
 
 ## Options
 
-Example of `config.toml`
+`config.toml` of [example slides](https://heavywatal.github.io/slides/)
 
 ```toml
 +++
@@ -38,4 +93,3 @@ type = "reveal"
 draft = false
 +++
 ```
-

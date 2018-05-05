@@ -1,3 +1,5 @@
 /node_modules/
-reveal.js/
-remark.min.js
+/reveal.js/
+/remark
+/static/reveal.js
+/static/remark.min.js
