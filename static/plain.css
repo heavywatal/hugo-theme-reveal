@@ -292,7 +292,10 @@ body {
 
 body {
   background-color: #ddd;
+  color: #444;
   margin: 0;
+  line-height: 1.4;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", Helvetica, "Yu Gothic Medium", sans-serif;
 }
 
 main {

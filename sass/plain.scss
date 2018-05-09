@@ -16,7 +16,10 @@ body {
 
 body {
   background-color: #ddd;
+  color: $main-color;
   margin: 0;
+  line-height: 1.4;
+  font-family: $main-font-family;
 }
 
 main {
