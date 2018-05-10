@@ -3,14 +3,14 @@
   "version": "0.1.0",
   "description": "Simple theme for Hugo with remark/reveal.js",
   "scripts": {
-    "build": "node-sass --output-style=expanded --include-path=static/reveal.js -o static/ sass/",
-    "start": "node-sass --output-style=expanded --include-path=static/reveal.js -o static/ -w sass/",
+    "build": "node-sass --output-style=expanded -o static/ sass/",
+    "start": "node-sass --output-style=expanded -o static/ -w sass/",
     "test": "http-server -o"
   },
   "repository": "https://github.com/heavywatal/hugo-theme-reveal.git",
   "license": "MIT",
   "devDependencies": {
     "http-server": "^0.11.1",
-    "node-sass": "^4.7.2"
+    "node-sass": "^4.9.0"
   }
 }
