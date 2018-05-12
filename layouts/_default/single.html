@@ -1,7 +1,5 @@
-{{ partial "header.html" . }}
-<body>
+{{ define "body" }}
 <main>
 {{ .Content }}
 </main>
-</body>
-{{ partialCached "footer.html" . }}
+{{ end }}

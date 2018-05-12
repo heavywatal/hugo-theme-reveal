@@ -1,0 +1,12 @@
+{{ define "body" }}
+<main>
+<header>
+<h1>{{ .Title }}{{ with .Params.subtitle }} — {{ . }}{{ end }}</h1>
+</header>
+<ul>
+{{ range .Data.Pages.ByDate -}}
+<a href="{{ .URL }}"><li>{{ .LinkTitle }}</li></a>
+{{ end -}}
+</ul>
+</main>
+{{ end }}

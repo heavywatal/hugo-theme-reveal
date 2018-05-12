@@ -1,14 +1,12 @@
-{{ partial "header.html" . }}
-<body>
+{{ define "body" }}
 <main>
 <header>
 <h1>{{ .Site.Title }}</h1>
 </header>
 <ul>
-{{ range where .Data.Pages.ByDate "File.BaseFileName" "index" -}}
-<a href="{{ .URL }}"><li>{{ .Date.Format "2006-01-02" }} {{ .Title }}</li></a>
+{{ range (union (where .Data.Pages "File.BaseFileName" "index") .Site.Sections).ByDate -}}
+<a href="{{ .URL }}"><li>{{ .Date.Format "2006-01-02" }} {{ .LinkTitle }}</li></a>
 {{ end -}}
 </ul>
 </main>
-</body>
-{{ partialCached "footer.html" . }}
+{{ end }}

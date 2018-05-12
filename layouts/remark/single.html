@@ -1,5 +1,7 @@
-{{ partial "header.html" . }}
-<body>
+{{ define "stylesheet" }}
+<link rel="stylesheet" href="{{ "remark-theme.css" | relURL }}">
+{{ end }}
+{{ define "body" }}
 <div id="source">
 {{ range $i, $slide := (split .RawContent "\n---") }}
 {{ if gt $i 0 }}---{{ end }}
@@ -10,7 +12,6 @@
 {{- index $parts 1 -}}
 {{ end }}
 {{ end }}
-</div>
+</div><!-- #source -->
 {{ partialCached "remark-create.html" . }}
-</body>
-{{ partialCached "footer.html" . }}
+{{ end }}

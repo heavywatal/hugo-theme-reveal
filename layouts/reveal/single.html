@@ -1,5 +1,8 @@
-{{ partial "header.html" . }}
-<body>
+{{ define "stylesheet" }}
+<link rel="stylesheet" href="{{ "reveal.js/css/reveal.css" | relURL }}">
+<link rel="stylesheet" href="{{ "reveal-theme.css" | relURL }}">
+{{ end }}
+{{ define "body" }}
 <div class="reveal">
 <div class="slides">
 {{- range (split .RawContent "\n---") -}}
@@ -11,8 +14,7 @@
 {{ index $parts 1 | markdownify }}
 </aside>{{ end }}
 </section>{{ end }}
-</div><!-- slides -->
-</div><!-- reveal -->
+</div><!-- .slides -->
+</div><!-- .reveal -->
 {{ partialCached "reveal-initialize.html" . }}
-</body>
-{{ partialCached "footer.html" . }}
+{{ end }}
