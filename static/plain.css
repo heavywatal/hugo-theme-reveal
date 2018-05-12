@@ -252,8 +252,7 @@ pre.chroma {
 }
 
 .footnote {
-  position: absolute;
-  bottom: 1rem;
+  margin: 4rem 0 0;
 }
 
 .cite {

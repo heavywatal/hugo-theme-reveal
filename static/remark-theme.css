@@ -275,8 +275,7 @@ body {
 }
 
 .remark-slide-content .footnote {
-  position: absolute;
-  bottom: 1rem;
+  margin: 4rem 0 0;
 }
 
 .remark-slide-content .cite {
