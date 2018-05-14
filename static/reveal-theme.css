@@ -288,6 +288,10 @@ section {
   text-align: right;
 }
 
+.reveal .screenshot {
+  margin: -24px 0;
+}
+
 .reveal .column-container {
   display: flex;
   flex-wrap: nowrap;

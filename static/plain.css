@@ -262,6 +262,10 @@ pre.chroma {
   text-align: right;
 }
 
+.screenshot {
+  margin: -24px 0;
+}
+
 .column-container {
   display: flex;
   flex-wrap: nowrap;

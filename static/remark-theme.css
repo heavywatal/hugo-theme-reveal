@@ -285,6 +285,10 @@ body {
   text-align: right;
 }
 
+.remark-slide-content .screenshot {
+  margin: -24px 0;
+}
+
 .remark-slide-content .column-container {
   display: flex;
   flex-wrap: nowrap;
