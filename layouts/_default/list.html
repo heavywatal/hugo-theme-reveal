@@ -5,7 +5,7 @@
 </header>
 <ul>
 {{ range .Data.Pages.ByDate -}}
-<a href="{{ .URL }}"><li>{{ .LinkTitle }}</li></a>
+<a href="{{ .RelPermalink }}"><li>{{ .LinkTitle }}</li></a>
 {{ end -}}
 </ul>
 </main>
