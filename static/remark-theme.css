@@ -267,15 +267,16 @@ body {
 .remark-slide-content .author {
   font-weight: bold;
   font-size: 1.1rem;
-  margin: 1rem 0;
+  margin: 2rem 0 1rem;
 }
 
 .remark-slide-content .affiliation {
   font-size: 1.1rem;
+  margin: 1rem 0 2rem;
 }
 
 .remark-slide-content .footnote {
-  margin: 4rem 0 0;
+  margin: 3rem 0 0;
 }
 
 .remark-slide-content .cite {
