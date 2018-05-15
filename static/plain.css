@@ -251,6 +251,17 @@ pre.chroma {
   margin-top: 0.2rem;
 }
 
+kbd {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 0.75rem;
+  padding: 1px 4px;
+  margin: -4px 2px 0 0;
+  box-shadow: 1px 1px 1px #808080;
+  border: solid 1px #ccc;
+  border-radius: 3px;
+}
+
 .author {
   font-weight: bold;
   font-size: 1.1rem;
@@ -319,12 +330,12 @@ body {
 
 main {
   background-color: #fff;
-  max-width: 800px;
+  max-width: 720px;
   min-height: 100%;
   margin: 0 auto;
   padding: 3rem;
 }
 
 hr {
-  margin: 3rem;
+  margin: 2rem;
 }
