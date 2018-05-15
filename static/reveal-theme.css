@@ -231,6 +231,16 @@ section {
   color: #999;
 }
 
+.reveal figure {
+  display: inline-block;
+  position: relative;
+}
+
+.reveal figcaption {
+  position: absolute;
+  right: 0;
+}
+
 .reveal em {
   font-style: italic;
 }
@@ -288,8 +298,13 @@ section {
   text-align: right;
 }
 
+.reveal .url {
+  color: #666;
+  font-size: 0.45rem;
+}
+
 .reveal .screenshot {
-  margin: -24px 0;
+  margin: -20px -30px;
 }
 
 .reveal .column-container {

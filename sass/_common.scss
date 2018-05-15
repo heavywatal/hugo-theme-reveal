@@ -93,6 +93,16 @@ blockquote {
   }
 }
 
+figure {
+  display: inline-block;
+  position: relative;
+}
+
+figcaption {
+  position: absolute;
+  right: 0;
+}
+
 em {
   font-style: italic;
 }

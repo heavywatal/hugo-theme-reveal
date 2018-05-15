@@ -205,6 +205,16 @@ blockquote::before {
   color: #999;
 }
 
+figure {
+  display: inline-block;
+  position: relative;
+}
+
+figcaption {
+  position: absolute;
+  right: 0;
+}
+
 em {
   font-style: italic;
 }
@@ -262,8 +272,13 @@ pre.chroma {
   text-align: right;
 }
 
+.url {
+  color: #666;
+  font-size: 0.45rem;
+}
+
 .screenshot {
-  margin: -24px 0;
+  margin: -20px -30px;
 }
 
 .column-container {

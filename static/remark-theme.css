@@ -228,6 +228,16 @@ body {
   color: #999;
 }
 
+.remark-slide-content figure {
+  display: inline-block;
+  position: relative;
+}
+
+.remark-slide-content figcaption {
+  position: absolute;
+  right: 0;
+}
+
 .remark-slide-content em {
   font-style: italic;
 }
@@ -285,8 +295,13 @@ body {
   text-align: right;
 }
 
+.remark-slide-content .url {
+  color: #666;
+  font-size: 0.45rem;
+}
+
 .remark-slide-content .screenshot {
-  margin: -24px 0;
+  margin: -20px -30px;
 }
 
 .remark-slide-content .column-container {
