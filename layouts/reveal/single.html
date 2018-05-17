@@ -5,7 +5,7 @@
 {{ define "body" }}
 <div class="reveal">
 <div class="slides">
-{{- range (split .RawContent "\n---") -}}
+{{- range (split .RawContent "\n\n---") -}}
 {{ $parts := (split . "\n???") }}
 <section>
 {{ index $parts 0 | markdownify -}}

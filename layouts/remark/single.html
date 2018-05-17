@@ -3,7 +3,7 @@
 {{ end }}
 {{ define "body" }}
 <div id="source">
-{{ range $i, $slide := (split .RawContent "\n---") }}
+{{ range $i, $slide := (split .RawContent "\n\n---") }}
 {{ if gt $i 0 }}---{{ end }}
 {{ $parts := (split $slide "\n???") }}
 {{- index $parts 0 | markdownify -}}
