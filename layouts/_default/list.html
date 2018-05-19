@@ -3,6 +3,7 @@
 <header>
 <h1>{{ .Title }}{{ with .Params.subtitle }} — {{ . }}{{ end }}</h1>
 </header>
+{{ .Content }}
 <ul>
 {{ range .Data.Pages.ByDate -}}
 <a href="{{ .RelPermalink }}"><li>{{ .LinkTitle }}</li></a>
