@@ -24,6 +24,27 @@
   font-size: 0.45rem;
 }
 
+.readmore {
+  padding: 8px 48px 8px 20px;
+  border-radius: 4px;
+  font-weight: normal;
+  color: #fff;
+  background-color: #aaa;
+  position: relative;
+
+  &:hover {
+    background-color: $main-color;
+    text-decoration: none;
+  }
+
+  &::after {
+    content: "❯";
+    position: absolute;
+    right: 12px;
+    color: #fff;
+  }
+}
+
 .screenshot {
   margin: -24px -30px;
 }
