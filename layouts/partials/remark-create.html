@@ -1,6 +1,7 @@
 <script src="{{ "remark.min.js" | relURL }}"></script>
 <script>
-let slideshow = remark.create({
+{
+const slideshow = remark.create({
   ratio: '4:3',
   navigation: {
     scroll: false,
@@ -18,23 +19,13 @@ let slideshow = remark.create({
   countIncrementalSlides: false,
   highlightLanguage: "no-highlight"
 });
-{
-  reload_visible_img = function() {
-    let imgs = document.querySelectorAll(".remark-slide-container img");
-    for(let i = 0; i < imgs.length; ++i){
-      let src = imgs[i].src;
-      imgs[i].src += "?q";
-      imgs[i].src = src;
-    }
+const slide_elements = document.querySelectorAll('.remark-slide');
+slideshow.on('afterShowSlide', function(slide) {
+  const this_slide = slide_elements[slide.getSlideIndex()];
+  const img_elements = this_slide.getElementsByTagName('img');
+  for (let i = 0; i < img_elements.length; ++i) {
+    img_elements[i].click();
   }
-
-  let images = document.querySelectorAll("img");
-  for(let i = 0; i < images.length; ++i){
-    images[i].onclick = reload_visible_img;
-  }
-
-  slideshow.on('hideSlide', function(slide) {
-    reload_visible_img();
-  });
-}
+});
+};
 </script>

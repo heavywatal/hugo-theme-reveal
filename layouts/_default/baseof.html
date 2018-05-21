@@ -15,5 +15,6 @@
 {{ template "_internal/google_analytics.html" . }}
 </head>
 <body>{{ block "body" . -}}{{ end -}}
+{{ partialCached "reload-img-onclick.html" . -}}
 </body>
 </html>
