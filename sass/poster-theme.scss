@@ -1,0 +1,26 @@
+@charset "utf-8";
+
+@import "variable";
+@import "chroma";
+@import "common";
+@import "class";
+
+html {
+  font-size: 100%;
+}
+
+body {
+  padding: 1rem;
+  line-height: 1.56;
+  font-family: $main-font-family;
+  font-weight: normal;
+  color: $main-color;
+  background-color: #ddd;
+}
+
+section {
+  background-color: $background-color;
+  box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
