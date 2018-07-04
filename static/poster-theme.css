@@ -250,7 +250,7 @@ section {
 }
 
 h1 {
-  margin: 0;
+  margin: 0 0 0.5rem;
   font-size: 2rem;
 }
 
@@ -260,6 +260,22 @@ h2 {
 
 h3 {
   margin: 0 0 0.5rem;
+}
+
+ul {
+  margin: 0.5rem 0;
+}
+
+dl {
+  margin: 0.2rem 0;
+}
+
+dt:first-child {
+  margin-top: 0;
+}
+
+dd {
+  margin: 0;
 }
 
 .column {
@@ -273,4 +289,23 @@ h3 {
 
 .column:last-child {
   margin-right: 0;
+}
+
+p:last-child,
+ul:last-child {
+  margin-bottom: 0;
+}
+
+.img-container {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+.img-container > div {
+  flex: 1 1 0;
+}
+
+.img-container > div > img {
+  width: 100%;
 }
