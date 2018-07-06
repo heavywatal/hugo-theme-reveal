@@ -239,12 +239,12 @@ body {
   font-family: "Helvetica Neue", "Segoe UI", Helvetica, "Yu Gothic Medium", sans-serif;
   font-weight: normal;
   color: #444;
-  background-color: #ddd;
+  background-color: #fff;
 }
 
 section {
   background-color: #fff;
-  box-shadow: 0 0.2rem 1.2rem rgba(0, 0, 0, 0.25);
+  box-shadow: 0 0.2rem 1.2rem rgba(0, 0, 0, 0.4);
   padding: 1rem;
   margin: 0.8rem;
 }
@@ -267,7 +267,7 @@ ul {
 }
 
 dl {
-  margin: 0.2rem 0;
+  margin: 0;
 }
 
 dt:first-child {
