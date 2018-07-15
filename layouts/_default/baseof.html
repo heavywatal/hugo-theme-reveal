@@ -12,6 +12,7 @@
 {{ partialCached "twittercard.html" . -}}
 {{ .Hugo.Generator }}
 {{ partialCached "mathjax.html" . }}
+{{ partialCached "fontawesome.html" . -}}
 {{ template "_internal/google_analytics.html" . }}
 </head>
 <body>{{ block "body" . -}}{{ end -}}
