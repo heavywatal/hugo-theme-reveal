@@ -1,4 +1,4 @@
-# hugo-theme-reveal: simple theme for Hugo with remark/reveal.js
+# hugo-theme-reveal: Hugo theme for reveal.js and remark
 
 ## Installation
 
@@ -6,10 +6,10 @@
 
 https://github.com/hakimel/reveal.js
 
-1.  Clone reveal.js
+1.  Clone reveal.js:
     ```sh
     git clone https://github.com/hakimel/reveal.js.git
-    git -C reveal.js/ checkout tags/3.6.0
+    git -C reveal.js/ checkout tags/3.7.0
     ```
 
 1.  Copy necessary files to `static/`:
@@ -26,9 +26,9 @@ https://github.com/hakimel/reveal.js
 
 https://github.com/gnab/remark/wiki/Contributing#building
 
-1.  Clone remark and install dependencies
+1.  Clone remark and install dependencies:
     ```sh
-    git clone https://github.com/hakimel/reveal.js.git
+    git clone https://github.com/gnab/remark.git
     cd remark/
     npm install
     ```
@@ -57,8 +57,7 @@ https://github.com/gnab/remark/wiki/Contributing#building
 
 ## Options
 
-`config.toml` of [example slides](https://heavywatal.github.io/slides/)
-
+`config.toml` of [example slides](https://heavywatal.github.io/slides/):
 ```toml
 +++
 title = "Slide decks — Heavy Watal"
@@ -83,12 +82,11 @@ og_image = "https://avatars.githubusercontent.com/heavywatal"
 +++
 ```
 
-Example of front matter
-
+Example of front matter:
 ```toml
 +++
-title = "Introduction to data preprocessing"
-date = 2018-03-14T16:00:00+09:00
+title = "Writing an R package interface to C++ libraries with Rcpp"
+date = 2018-07-15T15:00:00+09:00
 type = "reveal"
 draft = false
 +++
