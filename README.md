@@ -16,10 +16,9 @@ https://github.com/hakimel/reveal.js
     ```sh
     SRC=reveal.js
     DST=static/reveal.js
-    rsync -auvm --exclude='theme' --exclude='*scss' $SRC/css $DST/
-    rsync -auvm $SRC/js $DST/
-    rsync -auvm --exclude='css' --exclude='font' $SRC/lib $DST/
-    rsync -auvm --include='*/' --include='notes/notes.*' --exclude='*' $SRC/plugin $DST/
+    rsync -auvm --include='reveal.css' --include='/css' --exclude='*' $SRC/css $DST/
+    rsync -auvm --exclude='*.min.js' $SRC/js $DST/
+    rsync -auvm --include='notes/' --include='/plugin' --exclude='*/' $SRC/plugin $DST/
     ```
 
 ### remark
