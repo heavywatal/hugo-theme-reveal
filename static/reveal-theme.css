@@ -350,6 +350,15 @@ kbd {
   margin-right: 0;
 }
 
+.katex {
+  font-size: 1.12em;
+}
+
+.katex-display > .katex {
+  text-align: left;
+  padding-left: 2rem;
+}
+
 html {
   font-size: 160%;
 }
