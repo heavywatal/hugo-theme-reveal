@@ -2,6 +2,8 @@
 
 @import "variable";
 @import "chroma";
+@import "common";
+@import "class";
 
 html {
   font-size: 160%;
@@ -9,32 +11,20 @@ html {
 
 body {
   line-height: 1.56;
+  font-family: $main-font-family;
+  color: $main-color;
+  background-color: #ddd;
 }
 
 section {
   background-color: $background-color;
   box-sizing: border-box;
+  padding: 0 1.6rem;
   height: 100%;
   overflow-y: scroll;
 }
 
 .reveal {
-  @import "common";
-  @import "class";
-
-  font-family: $main-font-family;
-  font-weight: normal;
-  color: $main-color;
-  background-color: #ddd;
-
-  p {
-    margin: 1rem 0 0.8rem;
-  }
-
-  strong {
-    font-weight: bold;
-  }
-
   .slides {
     text-align: left;
 
