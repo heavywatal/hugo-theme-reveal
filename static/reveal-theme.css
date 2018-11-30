@@ -181,7 +181,15 @@ ul.task-list ul.task-list {
 }
 
 li {
-  margin-bottom: 0.4rem;
+  margin: 0.8rem 0;
+}
+
+li ul {
+  margin: 0;
+}
+
+li li {
+  margin: 0.4rem 0;
 }
 
 dt {

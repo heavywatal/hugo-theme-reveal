@@ -69,7 +69,15 @@ ul {
 }
 
 li {
-  margin-bottom: 0.4rem;
+  margin: 0.8rem 0;
+
+  ul {
+    margin: 0;
+  }
+
+  li {
+    margin: 0.4rem 0;
+  }
 }
 
 dt {

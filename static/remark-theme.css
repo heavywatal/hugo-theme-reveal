@@ -204,7 +204,15 @@ body {
 }
 
 .remark-slide-content li {
-  margin-bottom: 0.4rem;
+  margin: 0.8rem 0;
+}
+
+.remark-slide-content li ul {
+  margin: 0;
+}
+
+.remark-slide-content li li {
+  margin: 0.4rem 0;
 }
 
 .remark-slide-content dt {
