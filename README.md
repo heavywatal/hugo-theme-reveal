@@ -6,20 +6,10 @@
 
 https://github.com/hakimel/reveal.js
 
-1.  Clone reveal.js:
-    ```sh
-    git clone https://github.com/hakimel/reveal.js.git
-    git -C reveal.js/ checkout tags/3.7.0
-    ```
+1.  Initialize reveal.js submodule: `git submodule update --init --recursive`
 
-1.  Copy necessary files to `static/`:
-    ```sh
-    SRC=reveal.js
-    DST=static/reveal.js
-    rsync -auvm --include='reveal.css' --include='/css' --exclude='*' $SRC/css $DST/
-    rsync -auvm --exclude='*.min.js' $SRC/js $DST/
-    rsync -auvm --include='notes/' --include='/plugin' --exclude='*/' $SRC/plugin $DST/
-    ```
+1.  Execute `setup.py` to copy necessary files to `static/`.
+
 
 ### remark
 
