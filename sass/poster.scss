@@ -65,15 +65,6 @@ main {
   }
 }
 
-.column {
-  flex: 1 1 100%;
-  margin: 0 0.75rem;
-
-  &:last-child {
-    margin-right: 0;
-  }
-}
-
 .section-column {
   margin: 0;
   display: flex;

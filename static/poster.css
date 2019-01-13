@@ -298,15 +298,6 @@ main dd {
   margin: 0;
 }
 
-.column {
-  flex: 1 1 100%;
-  margin: 0 0.75rem;
-}
-
-.column:last-child {
-  margin-right: 0;
-}
-
 .section-column {
   margin: 0;
   display: flex;
