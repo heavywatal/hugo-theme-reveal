@@ -18,6 +18,7 @@ body {
 
 .remark-slide-content {
   @import "common";
+  @import "slide";
   @import "class";
 
   background-color: $background-color;
