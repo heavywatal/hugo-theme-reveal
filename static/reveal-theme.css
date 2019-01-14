@@ -276,41 +276,6 @@ h3 {
   margin: 1.2rem 0;
 }
 
-p {
-  margin: 0.7rem 0;
-}
-
-ol {
-  margin: 0.7rem 0;
-  padding-left: 1.5rem;
-}
-
-ul {
-  margin: 0.7rem 0;
-  padding-left: 1.3rem;
-}
-
-ul.task-list {
-  list-style-type: none;
-  padding-left: 0;
-}
-
-ul.task-list ul.task-list {
-  padding-left: 1rem;
-}
-
-li {
-  margin: 0.7rem 0;
-}
-
-li ul {
-  margin: 0;
-}
-
-li li {
-  margin: 0.4rem 0;
-}
-
 .author {
   font-weight: bold;
   font-size: 1.1rem;

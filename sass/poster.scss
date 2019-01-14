@@ -17,7 +17,7 @@ body {
   width: 1000px;
   min-width: 1000px;
   margin: 0 auto;
-  padding: 1rem;
+  padding: 0.5rem;
   line-height: 1.4;
   font-family: $main-font-family;
   font-weight: normal;
@@ -49,6 +49,10 @@ main {
   }
 
   ul {
+    margin: 0.5rem 0;
+  }
+
+  li {
     margin: 0.5rem 0;
   }
 

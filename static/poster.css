@@ -252,7 +252,7 @@ body {
   width: 1000px;
   min-width: 1000px;
   margin: 0 auto;
-  padding: 1rem;
+  padding: 0.5rem;
   line-height: 1.4;
   font-family: "Helvetica Neue", "Segoe UI", Helvetica, "Yu Gothic Medium", sans-serif;
   font-weight: normal;
@@ -283,6 +283,10 @@ main h3 {
 }
 
 main ul {
+  margin: 0.5rem 0;
+}
+
+main li {
   margin: 0.5rem 0;
 }
 
