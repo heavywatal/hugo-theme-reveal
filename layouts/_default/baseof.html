@@ -5,10 +5,10 @@
 <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
 <title>{{ .Title }}{{ with .Params.subtitle }} - {{ . }}{{ end }}</title>
 {{ block "stylesheet" . -}}{{ end -}}
-{{ $type := "plain" -}}
-{{ $types := slice "poster" "reveal" "remark" -}}
-{{ if in $types .Type -}}{{ $type = .Type }}{{ end -}}
-{{ partialCached "sass.html" . $type -}}
+{{ $types := slice "reveal" "remark" "poster" -}}
+{{ if in $types .Type -}}{{ partialCached "sass.html" . .Type -}}
+{{ else -}}{{ partialCached "sass-plain.html" . -}}
+{{ end -}}
 {{ with .Site.Author.name }}<meta name="author" content="{{ . }}">{{ end }}
 {{ partial "ogp.html" . -}}
 {{ partialCached "twittercard.html" . -}}
