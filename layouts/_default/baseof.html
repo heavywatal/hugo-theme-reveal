@@ -4,9 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
 <title>{{ .Title }}{{ with .Params.subtitle }} - {{ . }}{{ end }}</title>
-{{ block "stylesheet" . -}}
-<link rel="stylesheet" href="{{ "plain.css" | relURL }}">
-{{ end -}}
+{{ block "stylesheet" . -}}{{ end -}}
+{{ $type := "plain" -}}
+{{ $types := slice "poster" "reveal" "remark" -}}
+{{ if in $types .Type -}}{{ $type = .Type }}{{ end -}}
+{{ partialCached "sass.html" . $type -}}
 {{ with .Site.Author.name }}<meta name="author" content="{{ . }}">{{ end }}
 {{ partial "ogp.html" . -}}
 {{ partialCached "twittercard.html" . -}}

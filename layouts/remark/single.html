@@ -1,6 +1,3 @@
-{{ define "stylesheet" }}
-<link rel="stylesheet" href="{{ "remark-theme.css" | relURL }}">
-{{ end }}
 {{ define "body" }}
 <div id="source">
 {{ range $i, $slide := (split .RawContent "\n\n---") }}

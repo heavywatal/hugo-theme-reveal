@@ -1,0 +1,12 @@
+{{ $sass := "" -}}
+{{ $css := "css/theme-plain.css" -}}
+{{ $types := slice "reveal" "remark" "poster" -}}
+{{ if in $types .Type -}}
+  {{ $sass = .Type | printf "sass/%s.scss" | resources.Get -}}
+  {{ $css = .Type | printf "css/theme-%s.css" -}}
+{{ else -}}
+  {{ $sass = resources.Get "sass/plain.scss" -}}
+{{ end -}}
+{{ $options := (dict "targetPath" $css "outputStyle" "expanded") -}}
+{{ $style := $sass | resources.ToCSS $options -}}
+<link rel="stylesheet" href="{{ $style.Permalink | relURL }}">
