@@ -8,7 +8,7 @@ https://github.com/hakimel/reveal.js
 
 1.  Initialize reveal.js submodule: `git submodule update --init --recursive`
 
-1.  Execute `setup.py` to copy necessary files to `static/`.
+1.  Execute `setup.sh` to copy necessary files to `static/`.
 
 
 ### remark
