@@ -5,7 +5,7 @@
 </header>
 <ul>
 {{ range (union (where .Data.Pages "File.BaseFileName" "index") .Site.Sections).ByDate -}}
-<a href="{{ .URL }}"><li>{{ .Date.Format "2006-01-02" }} {{ .LinkTitle }}</li></a>
+<a href="{{ .RelPermalink }}"><li>{{ .Date.Format "2006-01-02" }} {{ .LinkTitle }}</li></a>
 {{ end -}}
 </ul>
 </main>
