@@ -5,7 +5,7 @@ description = "Hugo theme for reveal.js and remark"
 homepage = "https://github.com/heavywatal/hugo-theme-reveal/"
 tags = ["presentation", "slide", "revealjs", "remark"]
 features = []
-min_version = 0.42
+min_version = 0.55.1
 
 [author]
   name = "heavywatal"
