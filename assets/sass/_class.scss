@@ -13,6 +13,14 @@
   margin: 3rem 0 0;
 }
 
+.current-deck {
+  font-weight: bold;
+
+  &::after {
+    content: "👈";
+  }
+}
+
 .github {
   color: $main-color;
 }
