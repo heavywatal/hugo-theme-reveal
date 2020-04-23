@@ -2,47 +2,12 @@
 
 ## Installation
 
-### reveal.js
-
-https://github.com/hakimel/reveal.js
-
-1.  Initialize reveal.js submodule: `git submodule update --init --recursive`
+1.  Initialize [reveal.js](https://github.com/hakimel/reveal.js)
+    and [remark](https://github.com/gnab/remark) submodules:
+    `git submodule update --init --recursive`
 
 1.  Execute `setup.sh` to copy necessary files to `static/`.
 
-
-### remark
-
-https://github.com/gnab/remark/wiki/Contributing#building
-
-1.  Clone remark and install dependencies:
-    ```sh
-    git clone https://github.com/gnab/remark.git
-    cd remark/
-    npm install
-    ```
-
-1.  Modify `package.json` to exclude highlighter from build:
-    ```js
-    {
-      //
-      "config": {
-        "highlighter": false
-      },
-      //
-    }
-    ```
-
-1.  Build remark:
-    ```sh
-    node make highlighter
-    node make lint
-    node make bundle
-    node make minify
-    ```
-
-1.  Copy the minified script to `static/`:
-    `cp -a out/remark.min.js ../static/`
 
 ## Options
 
@@ -65,6 +30,9 @@ googleAnalytics = "UA-***"
 [author]
 name = "Watal M. Iwasaki"
 twitter = "@heavywatal"
+
+[markup.goldmark.renderer]
+unsafe = true
 
 [params]
 og_image = "https://avatars.githubusercontent.com/heavywatal"
