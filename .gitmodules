@@ -2,3 +2,6 @@
 	path = reveal.js
 	url = https://github.com/heavywatal/reveal.js.git
 	branch = dev
+[submodule "remark"]
+	path = remark
+	url = https://github.com/gnab/remark.git
