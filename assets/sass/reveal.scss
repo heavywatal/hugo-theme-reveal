@@ -10,13 +10,6 @@ html {
   font-size: 160%;
 }
 
-body {
-  line-height: 1.55;
-  font-family: $main-font-family;
-  color: $main-color;
-  background-color: #ddd;
-}
-
 section {
   background-color: $background-color;
   box-sizing: border-box;
@@ -26,6 +19,14 @@ section {
 }
 
 .reveal {
+  font-family: $main-font-family;
+  color: $main-color;
+  line-height: 1.55;
+
+  .backgrounds {
+    background-color: #ddd;
+  }
+
   .slides {
     text-align: left;
 
