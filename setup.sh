@@ -8,4 +8,6 @@ rsync -auvm $SRC/plugin/notes/ $DST/plugin/
 cd remark/
 npm install
 node make
-cp -a out/remark.* ../static/
+DST=../static/lib/remark
+mkdir -p $DST
+cp -a out/remark.min.js $DST
