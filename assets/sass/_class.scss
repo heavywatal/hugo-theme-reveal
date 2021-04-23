@@ -33,15 +33,13 @@
   color: #1da1f2;
 }
 
-.cite {
-  color: #666;
-  font-size: 0.75rem;
-  text-align: right;
-}
-
 .url {
-  color: #666;
+  color: #777;
   font-size: 0.45rem;
+
+  a {
+    color: inherit;
+  }
 }
 
 .readmore {

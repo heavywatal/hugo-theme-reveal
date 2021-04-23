@@ -98,14 +98,23 @@ table {
   }
 }
 
+cite {
+  color: #777;
+  font-size: 0.7rem;
+
+  a {
+    color: inherit;
+  }
+}
+
 figure {
-  position: relative;
-  margin: 1rem;
+  display: inline-block;
+  margin: 1rem 0;
+  line-height: 1;
 }
 
 figcaption {
-  position: absolute;
-  right: 0;
+  text-align: right;
 }
 
 em {
