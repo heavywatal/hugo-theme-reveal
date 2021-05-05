@@ -1,10 +1,11 @@
-$serif: Palatino, Merriweather, serif;
-$sans-serif: "Helvetica Neue", "Segoe UI", Helvetica, "Yu Gothic Medium", sans-serif;
-$monospace: Menlo, Consolas, "DejaVu Sans Mono", "Yu Gothic Medium", monospace;
+:root {
+  --serif: "Palatino Linotype", Palatino, serif;
+  --sans-serif: "Helvetica Neue", "Segoe UI", Helvetica, "Yu Gothic Medium", sans-serif;
+  --monospace: Menlo, Consolas, "DejaVu Sans Mono", "Yu Gothic Medium", monospace;
+  --main-font-family: var(--sans-serif);
+  --heading-font-family: var(--sans-serif);
 
-$main-font-family: $sans-serif;
-$heading-font-family: $sans-serif;
-
-$background-color: #fff;
-$main-color: #444;
-$heading-color: $main-color;
+  --background-color: #fff;
+  --main-color: #444;
+  --heading-color: var(--main-color);
+}

@@ -19,14 +19,14 @@ body {
   margin: 0 auto;
   padding: 0.5rem;
   line-height: 1.4;
-  font-family: $main-font-family;
+  font-family: var(--main-font-family);
   font-weight: normal;
-  color: $main-color;
+  color: var(--main-color);
   background-color: #fff;
 }
 
 section {
-  background-color: $background-color;
+  background-color: var(--background-color);
   box-shadow: 0 0.2rem 1.2rem rgba(0, 0, 0, 0.4);
   padding: 1rem;
   margin: 0.8rem;

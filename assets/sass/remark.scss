@@ -8,8 +8,8 @@ html {
 }
 
 body {
-  color: $main-color;
-  font-family: $main-font-family;
+  color: var(--main-color);
+  font-family: var(--main-font-family);
 }
 
 .remark-slide-scaler {
@@ -21,7 +21,7 @@ body {
   @import "slide";
   @import "class";
 
-  background-color: $background-color;
+  background-color: var(--background-color);
   font-size: inherit;
   padding: 0 1.8rem;
 }

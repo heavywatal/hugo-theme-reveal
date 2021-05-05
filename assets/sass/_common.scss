@@ -23,9 +23,9 @@ a {
 h1,
 h2,
 h3 {
-  font-family: $heading-font-family;
+  font-family: var(--heading-font-family);
   font-weight: bold;
-  color: $heading-color;
+  color: var(--heading-color);
 }
 
 p {
@@ -85,7 +85,7 @@ blockquote {
     top: -8px;
     left: 8px;
     font-size: 2.4rem;
-    font-family: $serif;
+    font-family: var(--serif);
     color: #999;
   }
 }
@@ -94,7 +94,7 @@ table {
   border-spacing: 1em 1ex;
 
   thead th {
-    border-bottom: 1px solid $main-color;
+    border-bottom: 1px solid var(--main-color);
   }
 }
 
@@ -124,7 +124,7 @@ em {
 pre,
 code,
 kbd {
-  font-family: $monospace;
+  font-family: var(--monospace);
 }
 
 code {

@@ -17,14 +17,14 @@ body {
 
 body {
   background-color: #ddd;
-  color: $main-color;
+  color: var(--main-color);
   margin: 0;
   line-height: 1.4;
-  font-family: $main-font-family;
+  font-family: var(--main-font-family);
 }
 
 main {
-  background-color: $background-color;
+  background-color: var(--background-color);
   max-width: 720px;
   min-height: 100%;
   margin: 0 auto;

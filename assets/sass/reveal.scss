@@ -11,7 +11,7 @@ html {
 }
 
 section {
-  background-color: $background-color;
+  background-color: var(--background-color);
   box-sizing: border-box;
   padding: 0 1.6rem;
   height: 100%;
@@ -19,8 +19,8 @@ section {
 }
 
 .reveal {
-  font-family: $main-font-family;
-  color: $main-color;
+  font-family: var(--main-font-family);
+  color: var(--main-color);
   line-height: 1.55;
 
   .backgrounds {

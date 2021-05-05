@@ -22,7 +22,7 @@
 }
 
 .github {
-  color: $main-color;
+  color: var(--main-color);
 }
 
 .facebook {
@@ -51,7 +51,7 @@
   position: relative;
 
   &:hover {
-    background-color: $main-color;
+    background-color: var(--main-color);
     text-decoration: none;
   }
 
