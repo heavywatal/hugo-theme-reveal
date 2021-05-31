@@ -4,7 +4,11 @@
 <h1>{{ .Site.Title }}</h1>
 </header>
 <ul>
-{{ range (union (where .Data.Pages "File.BaseFileName" "index") .Site.Sections).ByDate -}}
+{{ $decks := .Data.Pages -}}
+{{ if not .Site.BuildDrafts -}}
+  {{ $decks = where $decks ".Params.Unlisted" "!=" true -}}
+{{ end -}}
+{{ range $decks.ByDate -}}
 <a href="{{ .RelPermalink }}"><li>{{ .Date.Format "2006-01-02" }} {{ .LinkTitle }}</li></a>
 {{ end -}}
 </ul>
