@@ -1,27 +1,15 @@
 # hugo-theme-reveal: Hugo theme for reveal.js and remark
 
-## Installation
-
-1.  Initialize [reveal.js](https://github.com/hakimel/reveal.js)
-    and [remark](https://github.com/gnab/remark) submodules:
-    `git submodule update --init --recursive`
-
-1.  Execute `setup.sh` to copy necessary files to `static/`.
-
-
 ## Options
 
 `config.toml` of [example slides](https://heavywatal.github.io/slides/):
 ```toml
-+++
-title = "Slide decks — Heavy Watal"
-theme = "reveal"
 baseURL = "https://heavywatal.github.io/slides/"
 buildDrafts = false
 buildFuture = true
+title = "Slide decks — Heavy Watal"
 disableKinds = ["RSS", "sitemap"]
 ignoreFiles = ["\\.R$", "\\.Rmd$", "\\.csv$"]
-languageCode = "en-us"
 noTimes = true
 pygmentsUseClasses = true
 pygmentsCodefences = true
@@ -36,7 +24,9 @@ unsafe = true
 
 [params]
 og_image = "https://avatars.githubusercontent.com/heavywatal"
-+++
+
+[[module.imports]]
+path = "github.com/heavywatal/hugo-theme-reveal"
 ```
 
 Example of front matter:
@@ -48,3 +38,12 @@ type = "reveal"
 draft = false
 +++
 ```
+
+
+## Development
+
+1.  Initialize [reveal.js](https://github.com/hakimel/reveal.js)
+    and [remark](https://github.com/gnab/remark) submodules:
+    `git submodule update --init --recursive`
+
+1.  Execute `setup.sh` to copy necessary files to `static/`.
