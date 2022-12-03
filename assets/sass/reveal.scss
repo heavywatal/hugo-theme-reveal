@@ -10,6 +10,12 @@ html {
   font-size: 160%;
 }
 
+@-moz-document url-prefix() {
+  html {
+    font-size: 152%;
+  }
+}
+
 section {
   background-color: var(--background-color);
   box-sizing: border-box;
