@@ -1,3 +1,13 @@
+section:first-of-type {
+  h1 a {
+    color: var(--heading-color);
+  }
+
+  ol li {
+    margin-block: 0;
+  }
+}
+
 .author {
   font-weight: bold;
   font-size: 1.1rem;
@@ -7,7 +17,7 @@
 .affiliation {
   font-size: 0.9rem;
   margin: 0.3rem 0 1rem;
-  filter: brightness(150%);
+  opacity: 0.75;
 }
 
 .footnote {

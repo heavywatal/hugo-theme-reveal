@@ -10,6 +10,10 @@
   font-weight: bold;
 }
 
+body {
+  background-color: var(--background-color);
+}
+
 a {
   color: #0042ab;
   text-decoration: none;

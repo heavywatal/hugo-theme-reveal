@@ -17,7 +17,7 @@ html {
 }
 
 section {
-  background-color: var(--background-color);
+  background-color: var(--foreground-color);
   box-sizing: border-box;
   padding: 0 1.6rem;
   height: 100%;
@@ -30,10 +30,11 @@ section {
   line-height: 1.55;
 
   .backgrounds {
-    background-color: #ddd;
+    background-color: var(--background-color);
   }
 
   .slides {
     text-align: left;
+    box-shadow: 0 0 12px #999;
   }
 }

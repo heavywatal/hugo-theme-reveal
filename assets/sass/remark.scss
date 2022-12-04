@@ -12,8 +12,13 @@ body {
   font-family: var(--main-font-family);
 }
 
+.remark-container {
+  background-color: var(--background-color);
+}
+
 .remark-slide-scaler {
   overflow-y: scroll;
+  box-shadow: 0 0 12px #999;
 }
 
 .remark-slide-content {
@@ -21,9 +26,9 @@ body {
   @import "slide";
   @import "class";
 
-  background-color: var(--background-color);
+  background-color: var(--foreground-color);
   font-size: inherit;
-  padding: 0 1.8rem;
+  padding: 0 1.6rem;
 }
 
 .remark-notes-area {

@@ -16,7 +16,6 @@ body {
 }
 
 body {
-  background-color: #ddd;
   color: var(--main-color);
   margin: 0;
   line-height: 1.4;
@@ -24,7 +23,8 @@ body {
 }
 
 main {
-  background-color: var(--background-color);
+  background-color: var(--foreground-color);
+  box-shadow: 0 0 12px #999;
   max-width: 720px;
   min-height: 100%;
   margin: 0 auto;
