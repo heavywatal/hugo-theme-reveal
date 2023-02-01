@@ -1,4 +1,3 @@
-<script>
 {
 const reload_all_img = function() {
   const imgs = document.getElementsByTagName("img");
@@ -25,4 +24,3 @@ for (let i = 0; i < img_elements.length; ++i) {
   img_elements[i].onclick = reload_src;
 }
 };
-</script>
