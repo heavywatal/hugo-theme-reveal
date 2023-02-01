@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
 <title>{{ .Title }}{{ with .Params.subtitle }} - {{ . }}{{ end }}</title>
 {{ block "stylesheet" . -}}{{ end -}}
-{{ $types := slice "reveal" "remark" "poster" -}}
+{{ $types := slice "reveal" "poster" -}}
 {{ if in $types .Type -}}{{ partialCached "sass.html" . .Type -}}
 {{ else -}}{{ partialCached "sass-plain.html" . -}}
 {{ end -}}

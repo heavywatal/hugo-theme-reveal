@@ -1,9 +1,9 @@
 name = "reveal"
 license = "MIT"
 licenselink = "https://github.com/heavywatal/hugo-theme-reveal/blob/master/LICENSE"
-description = "Hugo theme for reveal.js and remark"
+description = "Hugo theme for reveal.js"
 homepage = "https://github.com/heavywatal/hugo-theme-reveal/"
-tags = ["presentation", "slide", "revealjs", "remark"]
+tags = ["presentation", "slide", "revealjs"]
 features = []
 min_version = "0.62.0"
 

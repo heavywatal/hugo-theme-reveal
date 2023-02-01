@@ -1,4 +1,4 @@
-# hugo-theme-reveal: Hugo theme for reveal.js and remark
+# hugo-theme-reveal: Hugo theme for reveal.js
 
 ## Options
 
@@ -42,8 +42,7 @@ draft = false
 
 ## Development
 
-1.  Initialize [reveal.js](https://github.com/hakimel/reveal.js)
-    and [remark](https://github.com/gnab/remark) submodules:
+1.  Initialize [reveal.js](https://github.com/hakimel/reveal.js) submodule:
     `git submodule update --init --recursive`
 
 1.  Execute `setup.sh` to copy necessary files to `static/`.
