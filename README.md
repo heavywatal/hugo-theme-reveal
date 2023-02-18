@@ -11,9 +11,7 @@ title = "Slide decks — Heavy Watal"
 disableKinds = ["RSS", "sitemap"]
 ignoreFiles = ["\\.R$", "\\.Rmd$", "\\.csv$"]
 noTimes = true
-pygmentsUseClasses = true
-pygmentsCodefences = true
-googleAnalytics = "UA-***"
+googleAnalytics = "G-***"
 
 [author]
 name = "Watal M. Iwasaki"
@@ -22,9 +20,13 @@ twitter = "@heavywatal"
 [markup.goldmark.renderer]
 unsafe = true
 
+[markup.highlight]
+noClasses = false
+
 [params]
 og_image = "https://avatars.githubusercontent.com/heavywatal"
 
+[module]
 [[module.imports]]
 path = "github.com/heavywatal/hugo-theme-reveal"
 ```
