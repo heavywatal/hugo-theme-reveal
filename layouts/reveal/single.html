@@ -1,5 +1,8 @@
-{{ define "stylesheet" -}}
+{{ define "head" -}}
 <link rel="stylesheet" href="{{ `lib/reveal.js/reveal.css` | relURL }}">
+<script defer src="{{ `lib/reveal.js/reveal.js` | relURL }}"></script>
+<script defer src="{{ `lib/reveal.js/plugin/notes.js` | relURL }}"></script>
+<script defer src="{{ `lib/reveal-initialize.js` | relURL }}"></script>
 {{ end }}
 {{ define "body" }}
 <div class="reveal">
@@ -15,7 +18,4 @@
 </section>{{ end }}
 </div><!-- .slides -->
 </div><!-- .reveal -->
-<script src="{{ `lib/reveal.js/reveal.js` | relURL }}"></script>
-<script src="{{ `lib/reveal.js/plugin/notes.js` | relURL }}"></script>
-<script src="{{ `lib/reveal-initialize.js` | relURL }}"></script>
 {{ end }}

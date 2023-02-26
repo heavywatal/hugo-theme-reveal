@@ -4,7 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
 <title>{{ .Title }}{{ with .Params.subtitle }} - {{ . }}{{ end }}</title>
-{{ block "stylesheet" . -}}{{ end -}}
+{{ block "head" . -}}{{ end -}}
+<script defer src="{{ `lib/reload-img-onclick.js` | relURL }}"></script>
 {{ $types := slice "reveal" "poster" -}}
 {{ if in $types .Type -}}{{ partialCached "sass.html" . .Type -}}
 {{ else -}}{{ partialCached "sass-plain.html" . -}}
@@ -17,6 +18,5 @@
 {{ template "_internal/google_analytics.html" . }}
 </head>
 <body>{{ block "body" . -}}{{ end -}}
-<script src="{{ `lib/reload-img-onclick.js` | relURL }}"></script>
 </body>
 </html>
