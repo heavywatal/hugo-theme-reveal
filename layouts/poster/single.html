@@ -1,3 +1,6 @@
+{{ define "head" -}}
+{{ partialCached "sass.html" . .Type -}}
+{{ end }}
 {{ define "body" }}
 <main>
 {{ .Content }}
