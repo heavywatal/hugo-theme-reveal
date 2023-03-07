@@ -2,4 +2,4 @@
 {{ $css := .Type | printf "css/theme-%s.css" -}}
 {{ $options := (dict "targetPath" $css "outputStyle" "expanded") -}}
 {{ $style := $sass | resources.ToCSS $options -}}
-<link rel="stylesheet" href="{{ $style.Permalink | relURL }}">
+<link rel="stylesheet" href="{{ $style.RelPermalink }}">
