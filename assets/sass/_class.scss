@@ -54,8 +54,8 @@ section:first-of-type {
 }
 
 .readmore {
-  padding: 8px 48px 8px 20px;
-  border-radius: 4px;
+  padding: 0.3em 1.8em 0.3em 0.8em;
+  border-radius: 0.2em;
   font-weight: normal;
   color: #fff;
   background-color: #aaa;
@@ -69,7 +69,7 @@ section:first-of-type {
   &::after {
     content: "❯";
     position: absolute;
-    right: 12px;
+    right: 0.5em;
     color: #fff;
   }
 }
