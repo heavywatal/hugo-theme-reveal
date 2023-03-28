@@ -1,5 +1,5 @@
 {{ define "head" -}}
-{{ partialCached "reveal.html" . -}}
+{{ partialCached "reveal.html" . ($.Param "dpi") -}}
 {{ partialCached "sass.html" . .Type -}}
 {{ end }}
 {{ define "body" }}

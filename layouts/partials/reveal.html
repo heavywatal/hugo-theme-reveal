@@ -2,3 +2,15 @@
 <script defer src="{{ `lib/reveal.js/reveal.js` | relURL }}"></script>
 <script defer src="{{ `lib/reveal.js/plugin/notes.js` | relURL }}"></script>
 <script defer src="{{ `lib/reveal-initialize.js` | relURL }}"></script>
+{{ $dpi := $.Param "dpi" -}}
+{{ if gt $dpi 72 -}}
+{{ $width := div (mul $dpi 40) 3 -}}
+{{ $height := mul $dpi 10 -}}
+{{ $scale := div (mul $dpi 160) 72 -}}
+<script>
+window.addEventListener('DOMContentLoaded', function() {
+  Reveal.configure({width: {{safeJS $width}}, height: {{safeJS $height}}});
+  document.querySelector('html').style.fontSize = '{{$scale}}%';
+})
+</script>
+{{ end -}}
