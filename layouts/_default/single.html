@@ -1,5 +1,18 @@
+{{ define "head" -}}
+{{ partialCached "reveal.html" . ($.Param "dpi") -}}
+{{ end }}
 {{ define "body" }}
-<main>
-{{ .Content }}
-</main>
+<div class="reveal">
+<div class="slides">
+{{- range (split .RawContent "\n\n---") -}}
+{{ $parts := (split . "\n???") }}
+<section>
+{{ index $parts 0 | markdownify -}}
+{{ if and $.Site.BuildDrafts (gt (len $parts) 1) -}}
+<aside class="notes">
+{{ index $parts 1 | markdownify }}
+</aside>{{ end }}
+</section>{{ end }}
+</div><!-- .slides -->
+</div><!-- .reveal -->
 {{ end }}

@@ -5,8 +5,8 @@
 <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
 <title>{{ .Title }}{{ with .Params.subtitle }} - {{ . }}{{ end }}</title>
 {{ block "head" . -}}
-{{ partialCached "sass-plain.html" . -}}
 {{ end -}}
+{{ partialCached "sass.html" . .Type .IsPage -}}
 <script defer src="{{ `lib/reload-img-onclick.js` | relURL }}"></script>
 {{ with .Site.Author.name }}<meta name="author" content="{{ . }}">{{ end }}
 {{ partial "ogp.html" . -}}
