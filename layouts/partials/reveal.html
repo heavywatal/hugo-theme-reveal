@@ -1,6 +1,7 @@
 <link rel="stylesheet" href="{{ `lib/reveal.js/reveal.css` | relURL }}">
 <script defer src="{{ `lib/reveal.js/reveal.js` | relURL }}"></script>
-<script defer src="{{ `lib/reveal.js/plugin/notes.js` | relURL }}"></script>
+<script defer src="{{ `lib/reveal.js/plugin/notes/notes.js` | relURL }}"></script>
+<script defer src="{{ `lib/reveal.js/plugin/search/search.js` | relURL }}"></script>
 <script defer src="{{ `lib/reveal-initialize.js` | relURL }}"></script>
 {{ $dpi := $.Param "dpi" -}}
 {{ if gt $dpi 72 -}}

@@ -29,6 +29,7 @@ Reveal.initialize({
   showNotes: false,
   autoPlayMedia: null,
   preloadIframes: null,
+  autoAnimate: false,
   mouseWheel: false,
   previewLinks: false,
   transition: 'none',
@@ -37,5 +38,5 @@ Reveal.initialize({
   pdfMaxPagesPerSlide: 1,
   pdfSeparateFragments: false,
   viewDistance: 2,
-  plugins: [ RevealNotes ]
+  plugins: [ RevealNotes, RevealSearch ]
 });
