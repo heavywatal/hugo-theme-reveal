@@ -1,6 +1,6 @@
 {{ $type := (cond .IsPage (cond (in "poster plain" .Type) .Type "reveal") "plain") -}}
 {{ $sass := $type | printf "sass/%s.scss" | resources.Get -}}
-{{ $css := $type | printf "css/theme-%s.css" -}}
-{{ $options := (dict "targetPath" $css "outputStyle" "expanded") -}}
+{{ $css := $type | printf "css/style-%s.css" -}}
+{{ $options := (dict "targetPath" $css "outputStyle" "expanded" "transpiler" "dartsass") -}}
 {{ $style := $sass | resources.ToCSS $options -}}
 <link rel="stylesheet" href="{{ $style.RelPermalink }}">
