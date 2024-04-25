@@ -9,7 +9,7 @@
 {{ partial "ogp.html" . -}}
 {{ partialCached "twittercard.html" . -}}
 {{ partialCached "katex.html" . -}}
-{{ template "_internal/google_analytics.html" . -}}
+{{ partialCached "google_analytics.html" . -}}
 {{ block "head" . -}}
 {{ end -}}
 <script defer src="{{ `lib/reload-img-onclick.js` | relURL }}"></script>
