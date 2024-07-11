@@ -8,10 +8,11 @@
 <meta name="author" content="{{ . }}">{{ end }}
 {{ partial "ogp.html" . -}}
 {{ partialCached "twittercard.html" . -}}
-{{ partialCached "katex.html" . -}}
 {{ partialCached "google_analytics.html" . -}}
 {{ block "head" . -}}
 {{ end -}}
+{{ partialCached "katex.html" . -}}
+{{ partialCached "iconify.html" . -}}
 <script defer src="{{ `lib/reload-img-onclick.js` | relURL }}"></script>
 {{ partialCached "sass.html" . .Type .IsPage -}}
 {{ with $.Param "css" -}}
