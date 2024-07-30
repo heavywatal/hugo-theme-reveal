@@ -13,10 +13,6 @@ ignoreFiles = ["\\.R$", "\\.Rmd$", "\\.csv$"]
 noTimes = true
 googleAnalytics = "G-***"
 
-[author]
-name = "Watal M. Iwasaki"
-twitter = "@heavywatal"
-
 [markup.goldmark.renderer]
 unsafe = true
 
@@ -25,6 +21,12 @@ noClasses = false
 
 [params]
 og_image = "https://avatars.githubusercontent.com/heavywatal"
+
+[params.author]
+name = "Watal M. Iwasaki"
+
+[params.social]
+twitter = "@heavywatal"
 
 [module]
 [[module.imports]]
