@@ -11,7 +11,7 @@
 {{ partialCached "google_analytics.html" . -}}
 {{ block "head" . -}}
 {{ end -}}
-{{ partialCached "katex.html" . -}}
+{{ partialCached "math.html" . ($.Param "math") -}}
 {{ partialCached "iconify.html" . -}}
 <script defer src="{{ `lib/reload-img-onclick.js` | relURL }}"></script>
 {{ partialCached "sass.html" . .Type .IsPage -}}
