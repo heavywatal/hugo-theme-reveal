@@ -11,13 +11,18 @@ title = "Slide decks — Heavy Watal"
 disableKinds = ["RSS", "sitemap"]
 ignoreFiles = ["\\.R$", "\\.Rmd$", "\\.csv$"]
 noTimes = true
-googleAnalytics = "G-***"
 
 [markup.goldmark.renderer]
 unsafe = true
 
+[markup.goldmark.extensions]
+strikethrough = false
+
 [markup.highlight]
 noClasses = false
+
+[services.googleAnalytics]
+ID = "G-***"
 
 [params]
 og_image = "https://avatars.githubusercontent.com/heavywatal"
@@ -40,6 +45,8 @@ title = "Writing an R package interface to C++ libraries with Rcpp"
 date = 2018-07-15T15:00:00+09:00
 type = "reveal"
 draft = false
+css = "style.css"
+dpi = 108
 +++
 ```
 
@@ -49,4 +56,4 @@ draft = false
 1.  Initialize [reveal.js](https://github.com/hakimel/reveal.js) submodule:
     `git submodule update --init --recursive`
 
-1.  Execute `setup.sh` to copy necessary files to `static/`.
+1.  Execute `make`.

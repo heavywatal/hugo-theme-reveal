@@ -1,3 +1,8 @@
+import Reveal from "./dist/reveal.esm";
+import RevealNotes from "./plugin/notes/notes.esm";
+import RevealSearch from "./plugin/search/search.esm";
+export { Reveal };
+
 Reveal.initialize({
   width: 960,
   height: 720,

@@ -1,17 +1,22 @@
-<link rel="stylesheet" href="{{ `lib/reveal.js/reveal.css` | relURL }}">
-<script defer src="{{ `lib/reveal.js/reveal.js` | relURL }}"></script>
-<script defer src="{{ `lib/reveal.js/plugin/notes/notes.js` | relURL }}"></script>
-<script defer src="{{ `lib/reveal.js/plugin/search/search.js` | relURL }}"></script>
-<script defer src="{{ `lib/reveal-initialize.js` | relURL }}"></script>
+{{ $options := (dict
+  "transpiler" "dartsass"
+  "outputStyle" "compressed"
+) -}}
+{{ with resources.Get "lib/reveal.js/reveal.scss" | toCSS $options -}}
+<link rel="stylesheet" href="{{ .RelPermalink }}">
+{{ end -}}
+{{ with resources.Get "lib/reveal.js/reveal.js" | js.Build (dict "format" "esm" "minify" true) -}}
+<script type="module">
+import { Reveal } from {{ .RelPermalink }};
 {{ $dpi := $.Param "dpi" -}}
 {{ if gt $dpi 72 -}}
 {{ $width := div (mul $dpi 40) 3 -}}
 {{ $height := mul $dpi 10 -}}
 {{ $scale := div (mul $dpi 160) 72 -}}
-<script>
 window.addEventListener('DOMContentLoaded', function() {
   Reveal.configure({width: {{safeJS $width}}, height: {{safeJS $height}}});
   document.querySelector('html').style.fontSize = '{{$scale}}%';
 })
+{{ end -}}
 </script>
 {{ end -}}
