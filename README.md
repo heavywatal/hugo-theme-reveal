@@ -49,11 +49,3 @@ css = "style.css"
 dpi = 108
 +++
 ```
-
-
-## Development
-
-1.  Initialize [reveal.js](https://github.com/hakimel/reveal.js) submodule:
-    `git submodule update --init --recursive`
-
-1.  Execute `make`.
