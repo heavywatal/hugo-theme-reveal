@@ -1,6 +1,6 @@
-import Reveal from "./dist/reveal.esm";
-import RevealNotes from "./plugin/notes/notes.esm";
-import RevealSearch from "./plugin/search/search.esm";
+import Reveal from "../../src/reveal.js/dist/reveal.esm";
+import RevealNotes from "../../src/reveal.js/plugin/notes/notes.esm";
+import RevealSearch from "../../src/reveal.js/plugin/search/search.esm";
 export { Reveal };
 
 Reveal.initialize({
