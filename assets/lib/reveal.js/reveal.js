@@ -1,6 +1,7 @@
 import Reveal from "../../src/reveal.js/dist/reveal.esm";
 import RevealNotes from "../../src/reveal.js/plugin/notes/notes.esm";
 import RevealSearch from "../../src/reveal.js/plugin/search/search.esm";
+window.Reveal = Reveal; // decktape#223
 export { Reveal };
 
 Reveal.initialize({
