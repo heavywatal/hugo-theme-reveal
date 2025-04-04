@@ -7,7 +7,7 @@ SRC_DIR := assets/src
 REVEAL_SRC := ${SRC_DIR}/reveal.js
 
 reveal: ${REVEAL_SRC}/dist/reveal.esm.js
-	grep '^* ' $<
+	grep '^ \* ' $<
 
 ${REVEAL_SRC}/dist/reveal.esm.js:
 	git submodule update --init --recursive
