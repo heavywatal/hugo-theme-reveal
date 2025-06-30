@@ -1,13 +1,8 @@
 @charset "utf-8";
 
-@use "variable";
 @use "common";
 @use "slide";
 @use "class";
-
-* {
-  box-sizing: border-box;
-}
 
 html,
 body {
@@ -15,14 +10,12 @@ body {
 }
 
 body {
-  color: var(--main-color);
   margin: 0;
   line-height: 1.4;
-  font-family: var(--main-font-family);
 }
 
 main {
-  background-color: var(--foreground-color);
+  background-color: var(--canvas);
   box-shadow: 0 0 12px #999;
   max-width: 720px;
   min-height: 100%;

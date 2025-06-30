@@ -1,26 +1,23 @@
 @charset "utf-8";
 
-@use "variable";
 @use "common";
 @use "slide";
 @use "class";
 
+.reveal-viewport {
+  background-color: var(--background-color);
+  color: var(--canvas-text);
+}
+
 section {
-  background-color: var(--foreground-color);
-  box-sizing: border-box;
+  background-color: var(--canvas);
   padding: 0 1.6rem;
   height: 100%;
   overflow-y: auto;
 }
 
 .reveal {
-  font-family: var(--main-font-family);
-  color: var(--main-color);
   line-height: 1.55;
-
-  .backgrounds {
-    background-color: var(--background-color);
-  }
 
   .slides {
     text-align: left;
@@ -40,8 +37,8 @@ section {
     bottom: 1px;
     right: 4px;
     opacity: 0.66;
-    font-family: var(--main-font-family);
-    color: var(--main-color);
+    font-family: inherit;
+    color: inherit;
     background: none;
   }
 }

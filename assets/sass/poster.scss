@@ -1,15 +1,9 @@
 @charset "utf-8";
 
-@use "variable";
 @use "common";
 @use "class";
 
-* {
-  box-sizing: inherit;
-}
-
 html {
-  box-sizing: border-box;
   font-size: 80%;
 }
 
@@ -19,14 +13,11 @@ body {
   margin: 0 auto;
   padding: 0.5rem;
   line-height: 1.4;
-  font-family: var(--main-font-family);
-  font-weight: normal;
-  color: var(--main-color);
   background-color: #fff;
 }
 
 section {
-  background-color: var(--foreground-color);
+  background-color: var(--canvas);
   box-shadow: 0 0.2rem 1.2rem rgba(0, 0, 0, 0.4);
   padding: 1rem;
   margin: 0.8rem;

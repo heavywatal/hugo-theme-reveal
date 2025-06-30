@@ -1,9 +1,10 @@
 @forward "common/bubble";
 @forward "common/chroma";
+@use "common/color";
 
 section:first-of-type {
   h1 a {
-    color: var(--heading-color);
+    color: var(--canvas-text);
   }
 
   ol li {
@@ -53,7 +54,7 @@ section:first-of-type {
   position: relative;
 
   &:hover {
-    background-color: var(--main-color);
+    background-color: var(--canvas-text);
     text-decoration: none;
   }
 
