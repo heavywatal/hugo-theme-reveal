@@ -20,7 +20,7 @@ section {
   line-height: 1.55;
 
   .slides {
-    text-align: left;
+    text-align: unset;
     box-shadow: 0 0 0.4em #999;
   }
 
@@ -37,9 +37,9 @@ section {
     bottom: 1px;
     right: 4px;
     opacity: 0.66;
-    font-family: inherit;
-    color: inherit;
-    background: none;
+    font-family: unset;
+    color: unset;
+    background: unset;
   }
 }
 
