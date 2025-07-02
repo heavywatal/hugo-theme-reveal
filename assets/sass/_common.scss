@@ -8,68 +8,21 @@ h3 {
 }
 
 p {
-  margin: 0.7rem 0;
+  margin-block: 0.7em;
 }
 
 ol {
-  margin: 0.7rem 0;
-  padding-inline-start: 1.5rem;
+  padding-inline-start: 1.5em;
 }
 
 ul {
-  margin: 0.7rem 0;
-  padding-inline-start: 1.3rem;
-
-  &.task-list {
-    list-style-type: none;
-    padding-inline-start: 0;
-
-    ul.task-list {
-      padding-inline-start: 1rem;
-    }
-  }
+  padding-inline-start: 1.3em;
 }
 
 li {
-  margin-block: 0.5rem;
-
-  ul {
-    margin: 0;
-  }
-
-  li {
-    margin-block: 0.4rem;
-  }
-
-  p {
+  margin-block: 0.5em;
+  li, p {
     margin-block: 0.4em;
-  }
-}
-
-dl {
-  margin: 0.7rem 0;
-
-  dt {
-    font-weight: bold;
-    margin-block-start: 0.6rem;
-  }
-
-  dd {
-    margin-block: 0.3em;
-    margin-inline: 1em 0;
-    line-height: 1.3em;
-    position: relative;
-
-    p {
-      margin-block: 0.3em;
-    }
-
-    &::before {
-      content: ":";
-      color: #ccc;
-      position: absolute;
-      left: -0.8em;
-    }
   }
 }
 
