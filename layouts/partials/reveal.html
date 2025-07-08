@@ -1,22 +1,27 @@
-{{ $options := (dict
+{{ $css_options := (dict
   "transpiler" "dartsass"
   "outputStyle" "compressed"
 ) -}}
-{{ with resources.Get "lib/reveal.js/reveal.scss" | toCSS $options -}}
+{{ with resources.Get "lib/reveal.js/reveal.scss" | css.Sass $css_options -}}
 <link rel="stylesheet" href="{{ .RelPermalink }}">
 {{ end -}}
-{{ with resources.Get "lib/reveal.js/reveal.js" | js.Build (dict "format" "esm" "minify" true) -}}
+{{ $js_options := (dict
+  "format" "esm"
+  "minify" true
+) -}}
+{{ with resources.Get "lib/reveal.js/reveal.js" | js.Build $js_options -}}
 <script type="module">
 import { Reveal } from {{ .RelPermalink }};
+{{ $scale := 160 -}}
 {{ $dpi := $.Param "dpi" -}}
 {{ if gt $dpi 72 -}}
+{{ $scale = div (mul $dpi $scale) 72 -}}
 {{ $width := div (mul $dpi 40) 3 -}}
 {{ $height := mul $dpi 10 -}}
-{{ $scale := div (mul $dpi 160) 72 -}}
-window.addEventListener('DOMContentLoaded', function() {
-  Reveal.configure({width: {{safeJS $width}}, height: {{safeJS $height}}});
-  document.querySelector('html').style.fontSize = '{{$scale}}%';
-})
+Reveal.configure({width: {{safeJS $width}}, height: {{safeJS $height}}});
 {{ end -}}
 </script>
+<style>
+html { font-size: {{ $scale }}%; }
+</style>
 {{ end -}}

@@ -49,4 +49,3 @@ Reveal.initialize({
   viewDistance: 2,
   plugins: [ RevealNotes, RevealSearch ]
 });
-document.querySelector('html').style.fontSize = '160%';
