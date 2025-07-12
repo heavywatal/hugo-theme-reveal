@@ -6,8 +6,8 @@
 <title>{{ .Title }}{{ with .Params.subtitle }} - {{ . }}{{ end }}</title>
 {{- with $.Param "author.name" }}
 <meta name="author" content="{{ . }}">{{ end }}
-{{ partial "ogp.html" . -}}
-{{ partialCached "twittercard.html" . -}}
+{{ partial "opengraph.html" . -}}
+{{ partialCached "twitter_cards.html" . -}}
 {{ partialCached "google_analytics.html" . -}}
 {{ block "head" . -}}
 {{ end -}}

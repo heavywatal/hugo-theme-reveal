@@ -25,7 +25,7 @@ noClasses = false
 ID = "G-***"
 
 [params]
-og_image = "https://avatars.githubusercontent.com/heavywatal"
+images = ["https://avatars.githubusercontent.com/heavywatal"]
 
 [params.author]
 name = "Watal M. Iwasaki"
