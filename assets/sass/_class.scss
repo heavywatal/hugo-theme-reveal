@@ -1,5 +1,6 @@
 @forward "common/bubble";
 @forward "common/chroma";
+@forward "common/readmore";
 @use "common/color";
 
 section:first-of-type {
@@ -42,27 +43,6 @@ section:first-of-type {
 
   a {
     color: inherit;
-  }
-}
-
-.readmore {
-  padding: 0.3em 1.8em 0.3em 0.8em;
-  border-radius: 0.2em;
-  font-weight: normal;
-  color: #fff;
-  background-color: #aaa;
-  position: relative;
-
-  &:hover {
-    background-color: var(--canvas-text);
-    text-decoration: none;
-  }
-
-  &::after {
-    content: "❯";
-    position: absolute;
-    right: 0.5em;
-    color: #fff;
   }
 }
 
