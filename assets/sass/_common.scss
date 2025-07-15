@@ -4,7 +4,7 @@
 h1,
 h2,
 h3 {
-  font-weight: bold;
+  font-weight: 600;
 }
 
 p {
@@ -36,8 +36,9 @@ cite {
 }
 
 figure {
-  display: inline-block;
-  margin: 1rem 0;
+  width: fit-content;
+  margin-inline: 0;
+  margin-block: 0.5rem;
   line-height: 1;
 }
 

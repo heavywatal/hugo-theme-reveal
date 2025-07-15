@@ -14,19 +14,19 @@ section:first-of-type {
 }
 
 .author {
-  font-weight: bold;
+  font-weight: 600;
   font-size: 1.1rem;
-  margin: 1rem 0 0.3rem;
+  margin-block: 1rem 0.2rem;
 }
 
 .affiliation {
   font-size: 0.9rem;
-  margin: 0.3rem 0 1rem;
+  margin-block: 0.2rem 1rem;
   opacity: 0.75;
 }
 
 .footnote {
-  margin: 1rem 0;
+  margin-block: 1rem 0;
 }
 
 .current-deck {
