@@ -4,8 +4,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
 <title>{{ .Title }}{{ with .Params.subtitle }} - {{ . }}{{ end }}</title>
-{{- with $.Param "author.name" }}
-<meta name="author" content="{{ . }}">{{ end }}
+{{ partialCached "favicon.html" . -}}
+{{ partialCached "manifest.html" . -}}
+{{ with .Site.Params.theme_color -}}
+<meta name="theme-color" content="{{ . }}">
+{{ end -}}
+{{ with $.Param "author.name" -}}
+<meta name="author" content="{{ . }}">
+{{ end -}}
 {{ partial "opengraph.html" . -}}
 {{ partialCached "twitter_cards.html" . -}}
 {{ partialCached "google_analytics.html" . -}}
