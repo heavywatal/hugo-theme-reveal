@@ -1,8 +1,4 @@
-{{ $css_options := (dict
-  "transpiler" "dartsass"
-  "outputStyle" "compressed"
-) -}}
-{{ with resources.Get "lib/reveal.js/reveal.scss" | css.Sass $css_options -}}
+{{ with resources.Get "lib/reveal.js/dist/reveal.css" -}}
 <link rel="stylesheet" href="{{ .RelPermalink }}">
 {{ end -}}
 {{ $js_options := (dict
