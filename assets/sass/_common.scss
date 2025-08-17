@@ -26,17 +26,11 @@ li {
   }
 }
 
-figure {
-  width: fit-content;
-  margin-inline: 0;
-  margin-block: 0.5rem;
+figure:has(img) {
   line-height: 1;
-}
-
-figcaption {
-  text-align: right;
-  contain: inline-size;
-  max-inline-size: 100%;
+  figcaption {
+    text-align: right;
+  }
 }
 
 pre {
