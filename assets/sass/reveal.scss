@@ -43,6 +43,15 @@ section {
   }
 }
 
+.scrollbar {
+  --r-overlay-element-bg-color: 128, 128, 128;
+  --r-overlay-element-fg-color: 128, 128, 128;
+}
+
+.scroll-page {
+  border-block-start: 0.9px solid hsl(0deg 0% 55% / 55%);
+}
+
 .fragment {
   &.bold.visible {
     font-weight: bold;

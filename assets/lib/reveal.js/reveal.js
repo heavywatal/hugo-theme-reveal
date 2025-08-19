@@ -44,8 +44,23 @@ Reveal.initialize({
   transition: 'none',
   transitionSpeed: 'fast',
   backgroundTransition: 'none',
+  scrollLayout: 'compact',
+  scrollSnap: false,
   pdfMaxPagesPerSlide: 1,
   pdfSeparateFragments: false,
   viewDistance: 2,
   plugins: [ RevealNotes, RevealSearch ]
 });
+
+Reveal.addKeyBinding(
+  { keyCode: 86, key: 'V', description: 'Toggle Scroll View' },
+  () => {
+    const url = new URL(window.location.href);
+    if (url.searchParams.get('view') === 'scroll') {
+      url.searchParams.delete('view');
+    } else {
+      url.searchParams.set('view', 'scroll');
+    }
+    window.location.replace(url);
+  }
+);
