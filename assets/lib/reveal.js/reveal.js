@@ -1,6 +1,6 @@
-import Reveal from "./dist/reveal.esm";
-import RevealNotes from "./plugin/notes/notes.esm";
-import RevealSearch from "./plugin/search/search.esm";
+import Reveal from "./dist/reveal.mjs";
+import RevealNotes from "./dist/plugin/notes.mjs";
+import RevealSearch from "./dist/plugin/search.mjs";
 window.Reveal = Reveal; // decktape#223
 export { Reveal };
 
@@ -9,12 +9,12 @@ Reveal.initialize({
   height: 720,
   margin: 0,
   controls: true,
-  controlsLayout: 'bottom-right',
+  controlsLayout: "bottom-right",
   controlsTutorial: false,
-  controlsBackArrows: 'faded',
+  controlsBackArrows: "faded",
   progress: false,
-  slideNumber: 'c/t',
-  showSlideNumber: 'all',
+  slideNumber: "c/t",
+  showSlideNumber: "all",
   hashOneBasedIndex: true,
   hash: true,
   respondToHashChanges: false,
@@ -28,7 +28,7 @@ Reveal.initialize({
   touch: true,
   loop: false,
   rtl: false,
-  navigationMode: 'linear',
+  navigationMode: "linear",
   shuffle: false,
   fragments: true,
   fragmentInURL: true,
@@ -41,26 +41,26 @@ Reveal.initialize({
   autoAnimate: false,
   mouseWheel: false,
   previewLinks: false,
-  transition: 'none',
-  transitionSpeed: 'fast',
-  backgroundTransition: 'none',
-  scrollLayout: 'compact',
+  transition: "none",
+  transitionSpeed: "fast",
+  backgroundTransition: "none",
+  scrollLayout: "compact",
   scrollSnap: false,
   pdfMaxPagesPerSlide: 1,
   pdfSeparateFragments: false,
   viewDistance: 2,
-  plugins: [ RevealNotes, RevealSearch ]
+  plugins: [RevealNotes, RevealSearch],
 });
 
 Reveal.addKeyBinding(
-  { keyCode: 86, key: 'V', description: 'Toggle Scroll View' },
+  { keyCode: 86, key: "V", description: "Toggle Scroll View" },
   () => {
     const url = new URL(window.location.href);
-    if (url.searchParams.get('view') === 'scroll') {
-      url.searchParams.delete('view');
+    if (url.searchParams.get("view") === "scroll") {
+      url.searchParams.delete("view");
     } else {
-      url.searchParams.set('view', 'scroll');
+      url.searchParams.set("view", "scroll");
     }
     window.location.replace(url);
-  }
+  },
 );
