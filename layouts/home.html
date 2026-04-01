@@ -4,11 +4,7 @@
 <h1>{{ .Site.Title }}</h1>
 </header>
 <ul>
-{{ $decks := .Data.Pages -}}
-{{ if not .Site.BuildDrafts -}}
-  {{ $decks = where $decks ".Params.Unlisted" "!=" true -}}
-{{ end -}}
-{{ range $decks.ByDate.Reverse -}}
+{{ range .Data.Pages.ByDate.Reverse -}}
 <a href="{{ .RelPermalink }}"><li>{{ .Date.Format "2006-01-02" }} {{ .LinkTitle }}</li></a>
 {{ end -}}
 </ul>
