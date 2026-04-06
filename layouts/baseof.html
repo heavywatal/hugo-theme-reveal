@@ -19,7 +19,7 @@
 {{ end -}}
 {{ partialCached "math.html" . ($.Param "math") -}}
 {{ partialCached "iconify.html" . -}}
-<script defer src="{{ `lib/reload-img-onclick.js` | relURL }}"></script>
+{{ partialCached "reload-img.html" . -}}
 {{ partialCached "sass.html" . .Type .IsPage -}}
 {{ with $.Param "css" -}}
 <link rel="stylesheet" href="{{ . }}">
