@@ -24,6 +24,9 @@
 {{ with $.Param "css" -}}
 <link rel="stylesheet" href="{{ . }}">
 {{ end -}}
+{{ if hugo.IsDevelopment }}{{ with $.Param "dev.css" -}}
+<link rel="stylesheet" href="{{ . }}">
+{{ end }}{{ end -}}
 </head>
 <body>{{ block "body" . -}}{{ end -}}
 </body>
