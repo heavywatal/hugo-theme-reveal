@@ -41,7 +41,7 @@ var e = () => {
 		}, this.getRegex = function() {
 			return l.toString().replace(/^\/\\b\(|\)\\b\/i$/g, "").replace(/\|/g, " ");
 		}, this.hiliteWords = function(t) {
-			if (!(t == null || !t) && l && !a.test(t.nodeName)) {
+			if (t != null && t && l && !a.test(t.nodeName)) {
 				if (t.hasChildNodes()) for (var n = 0; n < t.childNodes.length; n++) this.hiliteWords(t.childNodes[n]);
 				if (t.nodeType == 3) {
 					var r, d;
@@ -59,7 +59,7 @@ var e = () => {
 		}, this.remove = function() {
 			for (var e = document.getElementsByTagName(i), t; e.length && (t = e[0]);) t.parentNode.replaceChild(t.firstChild, t);
 		}, this.apply = function(e) {
-			if (!(e == null || !e)) return this.remove(), this.setRegex(e), this.hiliteWords(r), u;
+			if (e != null && e) return this.remove(), this.setRegex(e), this.hiliteWords(r), u;
 		};
 	}
 	return {
